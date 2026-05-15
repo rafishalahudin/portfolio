@@ -1,3 +1,56 @@
+// ── THEME TOGGLE ──
+(function () {
+  var html = document.documentElement;
+
+  function updateThemeLogos(theme) {
+    document.querySelectorAll('[data-light-src]').forEach(function(img) {
+      var src = theme === 'light'
+        ? img.getAttribute('data-light-src')
+        : img.getAttribute('data-dark-src');
+      if (src && img.src !== src) img.src = src;
+    });
+  }
+
+  function updateLabels(theme) {
+    document.querySelectorAll('.theme-label').forEach(function(el) {
+      el.textContent = theme === 'dark' ? 'Dark' : 'Light';
+    });
+    var mobileLabel = document.querySelector('.mobile-theme-mode-label');
+    if (mobileLabel) mobileLabel.textContent = theme === 'dark' ? 'Dark' : 'Light';
+  }
+
+  function applyTheme(theme) {
+    document.body.classList.add('theme-transitioning');
+    html.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+    updateLabels(theme);
+    updateThemeLogos(theme);
+    setTimeout(function () {
+      document.body.classList.remove('theme-transitioning');
+    }, 350);
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var current = html.getAttribute('data-theme') || 'dark';
+    updateLabels(current);
+    updateThemeLogos(current);
+
+    var btn = document.getElementById('themeToggle');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        applyTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+      });
+    }
+
+    var mobileBtn = document.getElementById('mobileThemeToggle');
+    if (mobileBtn) {
+      mobileBtn.addEventListener('click', function () {
+        applyTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+      });
+    }
+  });
+})();
+
 // Intersection observer for fade-up animations
 const targets = document.querySelectorAll(
   '.about-grid, .skills-grid, .timeline-item, .org-card, .achievement-card, .edu-card, .contact-links, .contact-details, .section-title, .section-label, .medium-card, .yt-card'

@@ -1,11 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Muhammad Rafi Shalahudin</title>
+  <title>Muhammad Rafi Shalahudin — Supply Chain & Data Analyst</title>
+  <meta name="description" content="Portfolio of Muhammad Rafi Shalahudin — Supply Chain & Distribution Supervisor at Erajaya, Data Analyst, and UI/UX Designer based in Jakarta, Indonesia." />
+  <meta name="keywords" content="Muhammad Rafi Shalahudin, Rafi Shalahudin, Supply Chain, Data Analyst, Dashboard, Erajaya, Jakarta, Portfolio, UX Designer" />
+  <meta name="author" content="Muhammad Rafi Shalahudin" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://rafishalahudin.github.io/portfolio/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rafishalahudin.github.io/portfolio/" />
+  <meta property="og:title" content="Muhammad Rafi Shalahudin — Supply Chain & Data Analyst" />
+  <meta property="og:description" content="Supply Chain Supervisor at Erajaya, Data Analyst, and UI/UX Designer based in Jakarta, Indonesia." />
+  <meta property="og:image" content="https://rafishalahudin.github.io/portfolio/photo.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Muhammad Rafi Shalahudin" />
+  <meta name="twitter:description" content="Supply Chain Supervisor at Erajaya, Data Analyst, and UI/UX Designer based in Jakarta." />
+  <meta name="twitter:image" content="https://rafishalahudin.github.io/portfolio/photo.png" />
+
+  <!-- Structured data: Person schema for Google knowledge recognition -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Muhammad Rafi Shalahudin",
+    "alternateName": "Rafi Shalahudin",
+    "url": "https://rafishalahudin.github.io/portfolio/",
+    "jobTitle": "Supply Chain & Distribution Supervisor",
+    "worksFor": { "@type": "Organization", "name": "Erajaya Swasembada" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Jakarta", "addressCountry": "ID" },
+    "sameAs": [
+      "https://linkedin.com/in/rafishalahudin",
+      "https://medium.com/@rafishalahudin",
+      "https://www.youtube.com/@rafishalahudin"
+    ]
+  }
+  </script>
+
   <link rel="icon" type="image/png" href="favicon-rafi.png" />
   <link rel="apple-touch-icon" href="favicon-rafi.png" />
+  <script>
+    (function(){
+      var t = localStorage.getItem('theme') ||
+              (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,20 +67,45 @@
     </div>
 
     <nav class="nav">
-      <a href="#home" class="nav-link">PORTFOLIO</a>
-      <a href="#about" class="nav-link">ABOUT</a>
-      <div class="nav-star">✦</div>
-      <a href="#experience" class="nav-link">EXPERIENCE</a>
-      <a href="#contact" class="nav-link">CONTACT</a>
-      <a href="mailto:rafisalahudin248@gmail.com" class="nav-cta"><i data-lucide="mail"></i> Contact Me</a>
-      <button class="nav-hamburger" id="hamburgerBtn" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-left">
+        <a href="#home" class="nav-brand">
+          <img src="logo-rafi.png" alt="Rafi" class="nav-logo-img" />
+          <span class="nav-brand-text">Rafi Shalahudin</span>
+        </a>
+      </div>
+
+      <div class="nav-center">
+        <a href="#about" class="nav-link">ABOUT</a>
+        <div class="nav-star">✦</div>
+        <a href="#experience" class="nav-link">EXPERIENCE</a>
+        <div class="nav-star">✦</div>
+        <a href="#contact" class="nav-link">CONTACT</a>
+      </div>
+
+      <div class="nav-right">
+        <button class="nav-theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="6.34" y2="6.34"/><line x1="17.66" y1="17.66" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="6.34" y2="17.66"/><line x1="17.66" y1="6.34" x2="19.07" y2="4.93"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <span class="theme-label">Dark</span>
+        </button>
+        <a href="https://mail.google.com/mail/?view=cm&to=rafisalahudin248@gmail.com" target="_blank" rel="noopener noreferrer" class="nav-cta"><i data-lucide="mail"></i><span class="nav-cta-text"> Contact Me</span></a>
+        <button class="nav-hamburger" id="hamburgerBtn" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </nav>
 
     <!-- Mobile menu overlay -->
     <div class="mobile-menu" id="mobileMenu">
       <button class="mobile-menu-close" id="menuClose" aria-label="Close menu">✕</button>
+      <div class="mobile-theme-row">
+        <span class="mobile-theme-label">Theme</span>
+        <button class="mobile-theme-btn" id="mobileThemeToggle" aria-label="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <span class="mobile-theme-mode-label"></span>
+        </button>
+      </div>
       <a href="#home" class="mobile-menu-link" data-close>Portfolio</a>
       <a href="#about" class="mobile-menu-link" data-close>About</a>
       <a href="#experience" class="mobile-menu-link" data-close>Experience</a>
@@ -46,7 +116,7 @@
       <a href="#videos" class="mobile-menu-link" data-close>Videos</a>
       <a href="#techstack" class="mobile-menu-link" data-close>Tech Stack</a>
       <a href="#contact" class="mobile-menu-link" data-close>Contact</a>
-      <a href="mailto:rafisalahudin248@gmail.com" class="mobile-menu-email" data-close>
+      <a href="https://mail.google.com/mail/?view=cm&to=rafisalahudin248@gmail.com" target="_blank" rel="noopener noreferrer" class="mobile-menu-email" data-close>
         <i data-lucide="mail"></i> rafisalahudin248@gmail.com
       </a>
       <div class="mobile-menu-socials">
@@ -74,7 +144,7 @@
         <a href="https://instagram.com/rafishalahudin" target="_blank" class="social-link" aria-label="Instagram"><i data-lucide="instagram"></i></a>
         <a href="https://medium.com/@rafishalahudin" target="_blank" class="social-link" aria-label="Medium"><i data-lucide="medium"></i></a>
         <a href="https://www.youtube.com/@rafishalahudin" target="_blank" class="social-link" aria-label="YouTube"><i data-lucide="youtube"></i></a>
-        <a href="mailto:rafisalahudin248@gmail.com" class="social-link" aria-label="Email"><i data-lucide="mail"></i></a>
+        <a href="https://mail.google.com/mail/?view=cm&to=rafisalahudin248@gmail.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Email"><i data-lucide="mail"></i></a>
       </div>
     </div>
   </section>
@@ -202,7 +272,10 @@
           <div class="timeline-body">
             <h3 class="timeline-role">Stock Analyst & Distribution Supervisor</h3>
             <div class="timeline-company-logo">
-              <img src="https://www.erajaya.com/assets/img/logo.png" alt="Erajaya Swasembada" class="company-logo" />
+              <img src="https://www.erajaya.com/assets/img/logo.png"
+                   data-dark-src="https://www.erajaya.com/assets/img/logo.png"
+                   data-light-src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Logo_Erajaya.png"
+                   alt="Erajaya Swasembada" class="company-logo logo-theme-aware" />
               <span class="timeline-company">Erajaya Swasembada</span>
             </div>
             <ul class="timeline-points">
@@ -222,7 +295,10 @@
           <div class="timeline-body">
             <h3 class="timeline-role">Merchandising Support Supervisor</h3>
             <div class="timeline-company-logo">
-              <img src="https://www.erajaya.com/assets/img/logo.png" alt="Erajaya Swasembada" class="company-logo" />
+              <img src="https://www.erajaya.com/assets/img/logo.png"
+                   data-dark-src="https://www.erajaya.com/assets/img/logo.png"
+                   data-light-src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Logo_Erajaya.png"
+                   alt="Erajaya Swasembada" class="company-logo logo-theme-aware" />
               <span class="timeline-company">Erajaya Swasembada</span>
             </div>
             <ul class="timeline-points">
@@ -652,7 +728,7 @@
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/trello/trello-plain.svg" alt="Trello" class="techstack-logo" />
           <span class="techstack-name" style="color:#0052cc">Trello</span>
         </div>
-        <div class="techstack-card">
+        <div class="techstack-card techstack-card--notion">
           <img src="https://cdn.simpleicons.org/notion/ffffff" alt="Notion" class="techstack-logo" />
           <span class="techstack-name" style="color:#e0e0e0">Notion</span>
         </div>
@@ -668,7 +744,7 @@
       <h2 class="section-title contact-title">Let's Connect</h2>
       <p class="contact-sub">Open to new opportunities in Supply Chain, Operations, and Data Analytics roles.</p>
       <div class="contact-links">
-        <a href="mailto:rafisalahudin248@gmail.com" class="contact-btn"><i data-lucide="mail"></i> rafisalahudin248@gmail.com</a>
+        <a href="https://mail.google.com/mail/?view=cm&to=rafisalahudin248@gmail.com" target="_blank" rel="noopener noreferrer" class="contact-btn"><i data-lucide="mail"></i> rafisalahudin248@gmail.com</a>
         <a href="https://linkedin.com/in/rafishalahudin" target="_blank" class="contact-btn-outline"><i data-lucide="linkedin"></i> LinkedIn</a>
         <a href="https://instagram.com/rafishalahudin" target="_blank" class="contact-btn-outline contact-btn-ig"><i data-lucide="instagram"></i> Instagram</a>
       </div>
@@ -696,7 +772,7 @@
       <div class="footer-socials">
         <a href="https://linkedin.com/in/rafishalahudin" target="_blank" class="footer-social-link" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
         <a href="https://instagram.com/rafishalahudin" target="_blank" class="footer-social-link" aria-label="Instagram"><i data-lucide="instagram"></i></a>
-        <a href="mailto:rafisalahudin248@gmail.com" class="footer-social-link" aria-label="Email"><i data-lucide="mail"></i></a>
+        <a href="https://mail.google.com/mail/?view=cm&to=rafisalahudin248@gmail.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Email"><i data-lucide="mail"></i></a>
       </div>
       <span class="footer-copy">© 2025 — All rights reserved</span>
     </div>

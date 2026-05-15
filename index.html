@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muhammad Rafi Shalahudin</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <img src="photo.png" alt="Rafi Shalahudin" class="hero-img" />
+      <div class="hero-overlay"></div>
+    </div>
+
+    <nav class="nav">
+      <a href="#home" class="nav-link">PORTFOLIO</a>
+      <a href="#about" class="nav-link">ABOUT</a>
+      <div class="nav-star">✦</div>
+      <a href="#experience" class="nav-link">EXPERIENCE</a>
+      <a href="#contact" class="nav-link">CONTACT</a>
+      <a href="mailto:rafisalahudin248@gmail.com" class="nav-cta"><i data-lucide="mail"></i> Contact Me</a>
+      <button class="nav-hamburger" id="hamburgerBtn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- Mobile menu overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="mobile-menu-close" id="menuClose" aria-label="Close menu">✕</button>
+      <a href="#home" class="mobile-menu-link" data-close>Portfolio</a>
+      <a href="#about" class="mobile-menu-link" data-close>About</a>
+      <a href="#experience" class="mobile-menu-link" data-close>Experience</a>
+      <a href="#skills" class="mobile-menu-link" data-close>Skills</a>
+      <a href="#achievements" class="mobile-menu-link" data-close>Achievements</a>
+      <a href="#portfolio" class="mobile-menu-link" data-close>Portfolio</a>
+      <a href="#contact" class="mobile-menu-link" data-close>Contact</a>
+      <a href="mailto:rafisalahudin248@gmail.com" class="mobile-menu-email" data-close>
+        <i data-lucide="mail"></i> rafisalahudin248@gmail.com
+      </a>
+      <div class="mobile-menu-socials">
+        <a href="https://linkedin.com/in/rafishalahudin" target="_blank"><i data-lucide="linkedin"></i> LinkedIn</a>
+        <a href="https://instagram.com/rafishalahudin" target="_blank"><i data-lucide="instagram"></i> Instagram</a>
+      </div>
+    </div>
+
+    <div class="hero-content hero-content-right">
+      <p class="hero-greeting">Hi, I'm</p>
+      <h1 class="hero-name">Muhammad Rafi<br>Shalahudin</h1>
+      <div class="hero-divider"></div>
+      <h2 class="hero-subtitle">Building Smarter<br>Supply Chains</h2>
+      <p class="hero-sub">Data-driven professional managing distribution, planogram strategy, and product allocation across Indonesia's leading retail channels.</p>
+      <div class="hero-typewriter">
+        <span class="typewriter-prefix">A </span><span class="typewriter-text" id="typewriterText"></span><span class="typewriter-cursor" id="typewriterCursor">|</span>
+      </div>
+      <a href="#about" class="hero-btn">View My Work →</a>
+    </div>
+
+    <div class="hero-footer">
+      <span class="hero-tagline">Operational efficiency through data and design</span>
+      <div class="hero-social">
+        <a href="https://linkedin.com/in/rafishalahudin" target="_blank" class="social-link" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+        <a href="https://instagram.com/rafishalahudin" target="_blank" class="social-link" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+        <a href="mailto:rafisalahudin248@gmail.com" class="social-link" aria-label="Email"><i data-lucide="mail"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-label">01 — About</div>
+      <div class="about-grid">
+        <div class="about-photo-col">
+          <div class="about-photo-wrap">
+            <img src="photo2.jpg" alt="Rafi working" class="about-photo" />
+            <div class="about-photo-badge">
+              <span class="badge-year">2+ yrs</span>
+              <span class="badge-label">at Erajaya</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-text-col">
+          <h2 class="section-title about-title">Who I Am</h2>
+          <p class="about-text">
+            I'm <strong>Muhammad Rafi Shalahudin</strong>, a Supply Chain Management Supervisor based in Jakarta, Indonesia. With a background spanning distribution management, planogram strategy, UI/UX design, and graphic design, I bring a unique blend of analytical and creative thinking to every challenge.
+          </p>
+          <p class="about-text">
+            Currently at Erajaya Swasembada, I oversee allocation processes for Apple products, premium audio brands, and gaming hardware — using Tableau, SAP, and Looker Studio to drive data-informed decisions across complex retail networks.
+          </p>
+          <div class="about-meta">
+            <div class="meta-item">
+              <span class="meta-label"><i data-lucide="map-pin"></i> Location</span>
+              <span class="meta-value">Jakarta, Indonesia</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label"><i data-lucide="mail"></i> Email</span>
+              <span class="meta-value">rafisalahudin248@gmail.com</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label"><i data-lucide="graduation-cap"></i> Education</span>
+              <span class="meta-value">Communication Science, GPA 3.76 — UPI</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label"><i data-lucide="instagram"></i> Instagram</span>
+              <span class="meta-value"><a href="https://instagram.com/rafishalahudin" target="_blank" class="meta-link">@rafishalahudin</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <div class="section-label">02 — Skills</div>
+      <h2 class="section-title">What I Work With</h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3 class="skill-group-title"><i data-lucide="bar-chart-2"></i> Supply Chain & Analytics</h3>
+          <div class="skill-tags">
+            <span class="tag">Tableau</span>
+            <span class="tag">SAP</span>
+            <span class="tag">Looker Studio</span>
+            <span class="tag">BlueYonder</span>
+            <span class="tag">Microsoft Excel</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Data Analysis</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group-title"><i data-lucide="palette"></i> Design & Creative</h3>
+          <div class="skill-tags">
+            <span class="tag">Adobe Illustrator</span>
+            <span class="tag">Adobe Photoshop</span>
+            <span class="tag">Adobe Premiere</span>
+            <span class="tag">UI/UX Design</span>
+            <span class="tag">Wireframing</span>
+            <span class="tag">Prototyping</span>
+            <span class="tag">Print Design</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group-title"><i data-lucide="briefcase"></i> Management & Communication</h3>
+          <div class="skill-tags">
+            <span class="tag">Trello</span>
+            <span class="tag">Google Workspace</span>
+            <span class="tag">Microsoft Office</span>
+            <span class="tag">Copywriting</span>
+            <span class="tag">Media Monitoring</span>
+            <span class="tag">Social Media</span>
+            <span class="tag">Web Design</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE SECTION -->
+  <section class="section experience" id="experience">
+    <div class="container">
+      <div class="section-label">03 — Experience</div>
+      <h2 class="section-title">Career Journey</h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-meta">
+            <span class="timeline-date">09/2023 — Present</span>
+            <span class="timeline-loc">Jakarta</span>
+          </div>
+          <div class="timeline-body">
+            <h3 class="timeline-role">Stock Analyst & Distribution Supervisor</h3>
+            <div class="timeline-company-logo">
+              <img src="https://www.erajaya.com/assets/img/logo.png" alt="Erajaya Swasembada" class="company-logo" />
+              <span class="timeline-company">Erajaya Swasembada</span>
+            </div>
+            <ul class="timeline-points">
+              <li><strong>Nationwide allocation:</strong> Own end-to-end product distribution for 3 major brands (Apple, Microsoft, McAfee) across ~500 SKUs, serving 1,300+ stores in 2 business units (Erafone & iBox) throughout Indonesia.</li>
+              <li><strong>Audit score improvement:</strong> Leveraged BlueYonder auto-allocation to optimize in-store stock levels, raising iBox merchandising audit compliance by approximately 30–40%.</li>
+              <li><strong>Automated reporting pipeline:</strong> Built internal tools using React, Vite, and Python that replaced manual data extraction and Excel templating, reducing report generation from hours of manual work to seconds.</li>
+              <li><strong>6 live dashboards:</strong> Designed and maintain 1 Tableau and 5 Looker Studio dashboards providing real-time visibility into stock movement, allocation accuracy, and distribution KPIs across all channels.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-meta">
+            <span class="timeline-date">07/2023 — 09/2023</span>
+            <span class="timeline-loc">Jakarta</span>
+          </div>
+          <div class="timeline-body">
+            <h3 class="timeline-role">Merchandising Support Supervisor</h3>
+            <div class="timeline-company-logo">
+              <img src="https://www.erajaya.com/assets/img/logo.png" alt="Erajaya Swasembada" class="company-logo" />
+              <span class="timeline-company">Erajaya Swasembada</span>
+            </div>
+            <ul class="timeline-points">
+              <li>Led strategic planogram development across iBox, Erafone, and Samsung Experience Stores in Eastern West Java and Western Central Java.</li>
+              <li>Managed planogram execution consistency to optimize product displays and maximize sales opportunities.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-meta">
+            <span class="timeline-date">04/2022 — 07/2023</span>
+            <span class="timeline-loc">Jakarta</span>
+          </div>
+          <div class="timeline-body">
+            <h3 class="timeline-role">Graphic Designer</h3>
+            <div class="timeline-company-logo">
+              <img src="https://k4all.org/wp-content/uploads/logos/Academia/Asia_Indonesia_Academy_Algorithma%20Data%20Science%20Academy_logo.png" alt="Algoritma Data Science School" class="company-logo company-logo--white" />
+              <span class="timeline-company">Algoritma Data Science School</span>
+            </div>
+            <ul class="timeline-points">
+              <li>Led production of promotional ads and visual content, creating up to 3 items per day.</li>
+              <li>Directed end-to-end printed materials production across 3 departments, achieving 80% design completion per request.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-meta">
+            <span class="timeline-date">01/2021 — 12/2021</span>
+            <span class="timeline-loc">Bandung</span>
+          </div>
+          <div class="timeline-body">
+            <h3 class="timeline-role">Public Relation Intern</h3>
+            <p class="timeline-company">Ratisa Media Citra</p>
+            <ul class="timeline-points">
+              <li>Conducted media monitoring for Ditjen Vokasi and Ditjen Dikti, managing 50+ news items daily.</li>
+              <li>Developed and launched 3 websites and created 1 UX landing page for IMBEX 2023.</li>
+              <li>Designed internal audit for the Ministry of Communication and Informatics — 100+ page report.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-meta">
+            <span class="timeline-date">08/2021 — 12/2021</span>
+            <span class="timeline-loc">Jakarta</span>
+          </div>
+          <div class="timeline-body">
+            <h3 class="timeline-role">UX Designer Intern</h3>
+            <div class="timeline-company-logo">
+              <img src="https://program.skilvul.com/static/skilvul.svg" alt="Skilvul" class="company-logo company-logo--skilvul" />
+              <span class="timeline-company">Skilvul | PT. Impactbyte Teknologi Edukasi</span>
+            </div>
+            <ul class="timeline-points">
+              <li>Revamped Kitabisa UI/UX news page — enhanced 30 frames for improved user experience.</li>
+              <li>Conceptualized and designed Liharama, an education app with 5+ features.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-meta">
+            <span class="timeline-date">02/2020 — 12/2021</span>
+            <span class="timeline-loc">Bandung</span>
+          </div>
+          <div class="timeline-body">
+            <h3 class="timeline-role">Administrative Intern</h3>
+            <div class="timeline-company-logo">
+              <img src="https://upload.wikimedia.org/wikipedia/id/0/09/Logo_Almamater_UPI.svg" alt="UPI" class="company-logo company-logo--upi" />
+              <span class="timeline-company">Office of Communication Dept. UPI</span>
+            </div>
+            <ul class="timeline-points">
+              <li>Conducted comprehensive design work (3/day) and internal quality audits for strategic decision-making.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ORGANIZATIONAL SECTION -->
+  <section class="section org" id="org">
+    <div class="container">
+      <div class="section-label">04 — Leadership</div>
+      <h2 class="section-title">Organizational Experience</h2>
+      <div class="org-grid">
+        <div class="org-card">
+          <div class="org-card-logo-row">
+            <img src="https://lh3.googleusercontent.com/proxy/sWYxGEBQBJSO-a7o_1yDZw9tYnPCkF08IDU0CS8G5iw7-xROM2GfOMx7k4ElwutgWjLvf5qBEHz56Y3mKkXFre79g3eDsk34SFJZLdTmjw" alt="BEM Himikasi UPI" class="org-logo" />
+            <span class="org-date">07/2020 – 07/2021</span>
+          </div>
+          <div class="org-card-top">
+            <h3 class="org-role">President</h3>
+          </div>
+          <p class="org-name">BEM Himikasi UPI · Bandung</p>
+          <ul class="org-points">
+            <li>Facilitated communication between 5 divisions with 128 staff members.</li>
+            <li>Achieved 80% staff satisfaction rate through effective teamwork.</li>
+            <li>Managed 10 online events with 80+ participants each.</li>
+          </ul>
+        </div>
+        <div class="org-card">
+          <div class="org-card-logo-row">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/BI_Logo_%28cropped%29.png/250px-BI_Logo_%28cropped%29.png" alt="Generasi Baru Indonesia" class="org-logo" />
+            <span class="org-date">08/2021 – 07/2022</span>
+          </div>
+          <div class="org-card-top">
+            <h3 class="org-role">Leader of Creative Division</h3>
+          </div>
+          <p class="org-name">Generasi Baru Indonesia UPI · Bandung</p>
+          <ul class="org-points">
+            <li>Led creation of 100+ poster designs and produced 3 videos including live-streaming services.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS SECTION -->
+  <section class="section achievements" id="achievements">
+    <div class="container">
+      <div class="section-label">05 — Achievements</div>
+      <h2 class="section-title">Recognition & Awards</h2>
+      <div class="achievements-grid">
+        <div class="achievement-card">
+          <div class="achievement-logo-wrap">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/BI_Logo_%28cropped%29.png/250px-BI_Logo_%28cropped%29.png" alt="Bank Indonesia" class="achievement-logo" />
+          </div>
+          <span class="achievement-medal achievement-medal--gold">Scholarship Awardee</span>
+          <h3 class="achievement-title">Bank Indonesia Scholarship</h3>
+          <p class="achievement-meta">04/2021 – 07/2023 · Bandung</p>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-logo-wrap">
+            <img src="https://k4all.org/wp-content/uploads/logos/Academia/Asia_Indonesia_Academy_Algorithma%20Data%20Science%20Academy_logo.png" alt="Algoritma" class="achievement-logo achievement-logo--invert" />
+          </div>
+          <span class="achievement-medal achievement-medal--silver">Best Staff</span>
+          <h3 class="achievement-title">Best Staff Q3 & Q4</h3>
+          <p class="achievement-meta">Algoritma Data Science School · 07/2022 – 12/2022</p>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-logo-wrap">
+            <img src="https://fpmipa.upi.edu/assets/images/news//thumbs/Sosialisasi_Pembinaan_Lomba_Inovasi_Digital_Mahasiswa_(LIDM).png" alt="LIDM PUSPRESNAS" class="achievement-logo achievement-logo--cover" />
+          </div>
+          <span class="achievement-medal achievement-medal--gold">Gold Medal</span>
+          <h3 class="achievement-title">LIDM PUSPRESNAS</h3>
+          <p class="achievement-meta">Kemendikbudristek · 07/2020 – 09/2020 · Yogyakarta</p>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-logo-wrap">
+            <img src="https://turnbackhoax.id/images/logo-mafindo.png" alt="MAFINDO TurnBackHoax" class="achievement-logo" />
+          </div>
+          <span class="achievement-medal achievement-medal--bronze">Bronze Medal</span>
+          <h3 class="achievement-title">TurnBackHoax.ID</h3>
+          <p class="achievement-meta">MAFINDO · 01/2020 – 02/2020 · Yogyakarta</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION SECTION -->
+  <section class="section education" id="education">
+    <div class="container">
+      <div class="section-label">06 — Education</div>
+      <div class="edu-block">
+        <div class="edu-left">
+          <h2 class="section-title">Academic<br />Background</h2>
+        </div>
+        <div class="edu-right">
+          <div class="edu-card">
+            <div class="edu-card-top-row">
+              <img src="https://upload.wikimedia.org/wikipedia/id/0/09/Logo_Almamater_UPI.svg" alt="UPI" class="edu-logo" />
+              <div class="edu-gpa-badge">
+                <span class="edu-gpa-label">GPA</span>
+                <span class="edu-gpa">3.76 <span class="edu-gpa-max">/ 4.0</span></span>
+              </div>
+            </div>
+            <div class="edu-divider"></div>
+            <h3 class="edu-degree">Bachelor of Communication Science</h3>
+            <p class="edu-school">Indonesia University of Education (UPI)</p>
+            <p class="edu-location">Bandung, Indonesia · 07/2018 – 01/2023</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SELECTED WORKS SECTION -->
+  <section class="section works" id="works">
+    <div class="container">
+      <div class="section-label">07 — Selected Works</div>
+      <h2 class="section-title">Dashboards & Tools I Built</h2>
+
+      <div class="works-grid">
+
+        <!-- Work 1 -->
+        <div class="work-card work-card--wide">
+          <div class="work-img-wrap">
+            <img src="work1.png" alt="Erajaya Planogram Dashboard" class="work-img" />
+            <div class="work-overlay">
+              <span class="work-overlay-label">Planogram Analytics · Erajaya</span>
+            </div>
+          </div>
+          <div class="work-info">
+            <div class="work-tags">
+              <span class="work-tag">Tableau</span>
+              <span class="work-tag">Looker Studio</span>
+              <span class="work-tag">SAP</span>
+              <span class="work-tag">Supply Chain</span>
+            </div>
+            <h3 class="work-title">Retail Inventory Control Dashboard</h3>
+            <p class="work-desc">End-to-end planogram compliance monitoring across all Erajaya channels — tracking hit percentage, ATP vs DOS, stock spreading, and PIC performance by brand and week.</p>
+          </div>
+        </div>
+
+        <!-- Work 2 -->
+        <div class="work-card">
+          <div class="work-img-wrap">
+            <img src="work2.png" alt="GPRTV Video Tracking Dashboard" class="work-img" />
+            <div class="work-overlay">
+              <span class="work-overlay-label">Media Monitoring · GPRTV</span>
+            </div>
+          </div>
+          <div class="work-info">
+            <div class="work-tags">
+              <span class="work-tag">Google Data Studio</span>
+              <span class="work-tag">WordPress</span>
+              <span class="work-tag">Media</span>
+            </div>
+            <h3 class="work-title">GPRTV Video Tracking Dashboard</h3>
+            <p class="work-desc">Content progress tracker for 11,631 videos across WordPress — visualizing upload status, sub-cluster breakdowns, and coordinator performance by team member.</p>
+          </div>
+        </div>
+
+        <!-- Work 3 -->
+        <div class="work-card">
+          <div class="work-img-wrap">
+            <img src="work3.png" alt="RICO NPI Monitoring" class="work-img" />
+            <div class="work-overlay">
+              <span class="work-overlay-label">NPI Monitoring · Erajaya</span>
+            </div>
+          </div>
+          <div class="work-info">
+            <div class="work-tags">
+              <span class="work-tag">Tableau</span>
+              <span class="work-tag">SAP</span>
+              <span class="work-tag">Inventory</span>
+            </div>
+            <h3 class="work-title">RICO · NPI Accessories Monitor</h3>
+            <p class="work-desc">New Product Introduction monitoring dashboard for accessories across 1,484 stores — tracking GR, GI, allocation, and SKU status by brand, system, and warehouse location.</p>
+          </div>
+        </div>
+
+        <!-- Work 4 -->
+        <div class="work-card work-card--wide">
+          <div class="work-img-wrap">
+            <img src="work4.png" alt="New Store Monitor" class="work-img" />
+            <div class="work-overlay">
+              <span class="work-overlay-label">Internal Tool · Erajaya</span>
+            </div>
+          </div>
+          <div class="work-info">
+            <div class="work-tags">
+              <span class="work-tag work-tag--react">React JS</span>
+              <span class="work-tag">Data Studio</span>
+              <span class="work-tag">Tableau</span>
+              <span class="work-tag">Operations</span>
+            </div>
+            <h3 class="work-title">New Store Monitor</h3>
+            <p class="work-desc">Real-time store readiness dashboard built with React JS — tracking 100 new stores across iBox, Erafone, and Samsung channels with allocation matrix, deadline status, and brand readiness flags.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BEHANCE PORTFOLIO SECTION -->
+  <section class="section portfolio-embed" id="portfolio">
+    <div class="container">
+      <div class="section-label">08 — Portfolio</div>
+      <div class="portfolio-header">
+        <h2 class="section-title">Creative Work</h2>
+        <a href="https://www.behance.net/gallery/138671939/Portfolio-and-Curriculum-Vitae-Rafi-Shalahudin" target="_blank" class="behance-link">View on Behance ↗</a>
+      </div>
+      <div class="behance-embed-wrap">
+        <iframe
+          src="https://www.behance.net/embed/project/138671939?ilo0=1"
+          height="316"
+          width="100%"
+          allowfullscreen
+          lazyload
+          frameborder="0"
+          allow="clipboard-write"
+          referrerpolicy="strict-origin-when-cross-origin"
+          title="Portfolio and Curriculum Vitae — Rafi Shalahudin"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-label">09 — Contact</div>
+      <h2 class="section-title contact-title">Let's Connect</h2>
+      <p class="contact-sub">Open to new opportunities in Supply Chain, Operations, and Data Analytics roles.</p>
+      <div class="contact-links">
+        <a href="mailto:rafisalahudin248@gmail.com" class="contact-btn"><i data-lucide="mail"></i> rafisalahudin248@gmail.com</a>
+        <a href="https://linkedin.com/in/rafishalahudin" target="_blank" class="contact-btn-outline"><i data-lucide="linkedin"></i> LinkedIn</a>
+        <a href="https://instagram.com/rafishalahudin" target="_blank" class="contact-btn-outline contact-btn-ig"><i data-lucide="instagram"></i> Instagram</a>
+      </div>
+      <div class="contact-details">
+        <div class="contact-detail-item">
+          <span class="contact-detail-label"><i data-lucide="map-pin"></i> Location</span>
+          <span class="contact-detail-value">Jakarta, Indonesia</span>
+        </div>
+        <div class="contact-detail-item">
+          <span class="contact-detail-label"><i data-lucide="external-link"></i> Portfolio</span>
+          <span class="contact-detail-value">bit.ly/portfoliorafi</span>
+        </div>
+        <div class="contact-detail-item">
+          <span class="contact-detail-label"><i data-lucide="instagram"></i> Instagram</span>
+          <span class="contact-detail-value">@rafishalahudin</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-name">Muhammad Rafi Shalahudin</span>
+      <div class="footer-socials">
+        <a href="https://linkedin.com/in/rafishalahudin" target="_blank" class="footer-social-link" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+        <a href="https://instagram.com/rafishalahudin" target="_blank" class="footer-social-link" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+        <a href="mailto:rafisalahudin248@gmail.com" class="footer-social-link" aria-label="Email"><i data-lucide="mail"></i></a>
+      </div>
+      <span class="footer-copy">© 2025 — All rights reserved</span>
+    </div>
+  </footer>
+
+  <script>
+    const BRAND_ICONS = {
+      linkedin: '<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>',
+      instagram: '<rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>'
+    };
+
+    function makeBrandSVG(paths) {
+      const ns = 'http://www.w3.org/2000/svg';
+      const svg = document.createElementNS(ns, 'svg');
+      svg.setAttribute('xmlns', ns);
+      svg.setAttribute('width', '1em');
+      svg.setAttribute('height', '1em');
+      svg.setAttribute('viewBox', '0 0 24 24');
+      svg.setAttribute('fill', 'none');
+      svg.setAttribute('stroke', 'currentColor');
+      svg.setAttribute('stroke-width', '2');
+      svg.setAttribute('stroke-linecap', 'round');
+      svg.setAttribute('stroke-linejoin', 'round');
+      svg.style.display = 'inline-block';
+      svg.style.verticalAlign = 'middle';
+      svg.style.flexShrink = '0';
+      svg.innerHTML = paths;
+      return svg;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Replace brand icons before Lucide runs
+      document.querySelectorAll('[data-lucide="linkedin"], [data-lucide="instagram"]').forEach(el => {
+        const name = el.getAttribute('data-lucide');
+        if (BRAND_ICONS[name]) el.replaceWith(makeBrandSVG(BRAND_ICONS[name]));
+      });
+      lucide.createIcons();
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

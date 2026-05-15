@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Muhammad Rafi Shalahudin</title>
-  <link rel="icon" type="image/png" href="favicon.png" />
-  <link rel="apple-touch-icon" href="favicon.png" />
+  <link rel="icon" type="image/png" href="favicon-rafi.png" />
+  <link rel="apple-touch-icon" href="favicon-rafi.png" />
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -42,6 +42,8 @@
       <a href="#skills" class="mobile-menu-link" data-close>Skills</a>
       <a href="#achievements" class="mobile-menu-link" data-close>Achievements</a>
       <a href="#portfolio" class="mobile-menu-link" data-close>Portfolio</a>
+      <a href="#writing" class="mobile-menu-link" data-close>Writing</a>
+      <a href="#videos" class="mobile-menu-link" data-close>Videos</a>
       <a href="#contact" class="mobile-menu-link" data-close>Contact</a>
       <a href="mailto:rafisalahudin248@gmail.com" class="mobile-menu-email" data-close>
         <i data-lucide="mail"></i> rafisalahudin248@gmail.com
@@ -69,6 +71,8 @@
       <div class="hero-social">
         <a href="https://linkedin.com/in/rafishalahudin" target="_blank" class="social-link" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
         <a href="https://instagram.com/rafishalahudin" target="_blank" class="social-link" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+        <a href="https://medium.com/@rafishalahudin" target="_blank" class="social-link" aria-label="Medium"><i data-lucide="medium"></i></a>
+        <a href="https://www.youtube.com/@rafishalahudin" target="_blank" class="social-link" aria-label="YouTube"><i data-lucide="youtube"></i></a>
         <a href="mailto:rafisalahudin248@gmail.com" class="social-link" aria-label="Email"><i data-lucide="mail"></i></a>
       </div>
     </div>
@@ -504,10 +508,38 @@
     </div>
   </section>
 
+  <!-- WRITING SECTION (Medium) -->
+  <section class="section writing" id="writing">
+    <div class="container">
+      <div class="section-label">09 — Writing</div>
+      <div class="content-header">
+        <h2 class="section-title">Latest Articles</h2>
+        <a href="https://medium.com/@rafishalahudin" target="_blank" rel="noopener noreferrer" class="content-ext-link">Read on Medium ↗</a>
+      </div>
+      <div class="medium-grid" id="mediumGrid">
+        <div class="feed-loading">Loading articles…</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEOS SECTION (YouTube) -->
+  <section class="section videos" id="videos">
+    <div class="container">
+      <div class="section-label">10 — Videos</div>
+      <div class="content-header">
+        <h2 class="section-title">Latest Videos</h2>
+        <a href="https://www.youtube.com/@rafishalahudin" target="_blank" rel="noopener noreferrer" class="content-ext-link">Watch on YouTube ↗</a>
+      </div>
+      <div class="youtube-grid" id="youtubeGrid">
+        <div class="feed-loading">Loading videos…</div>
+      </div>
+    </div>
+  </section>
+
   <!-- CONTACT SECTION -->
   <section class="section contact" id="contact">
     <div class="container">
-      <div class="section-label">09 — Contact</div>
+      <div class="section-label">11 — Contact</div>
       <h2 class="section-title contact-title">Let's Connect</h2>
       <p class="contact-sub">Open to new opportunities in Supply Chain, Operations, and Data Analytics roles.</p>
       <div class="contact-links">
@@ -547,8 +579,10 @@
 
   <script>
     const BRAND_ICONS = {
-      linkedin: '<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>',
-      instagram: '<rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>'
+      linkedin:  '<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>',
+      instagram: '<rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>',
+      medium:    '<circle cx="5" cy="12" r="4"/><ellipse cx="14" cy="12" rx="3" ry="4"/><ellipse cx="20.5" cy="12" rx="1.5" ry="3.5"/>',
+      youtube:   '<path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.45A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.97C5.12 20 12 20 12 20s6.88 0 8.59-.45a2.78 2.78 0 0 0 1.95-1.97A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/>'
     };
 
     function makeBrandSVG(paths) {
@@ -572,7 +606,7 @@
 
     document.addEventListener('DOMContentLoaded', () => {
       // Replace brand icons before Lucide runs
-      document.querySelectorAll('[data-lucide="linkedin"], [data-lucide="instagram"]').forEach(el => {
+      document.querySelectorAll('[data-lucide="linkedin"], [data-lucide="instagram"], [data-lucide="medium"], [data-lucide="youtube"]').forEach(el => {
         const name = el.getAttribute('data-lucide');
         if (BRAND_ICONS[name]) el.replaceWith(makeBrandSVG(BRAND_ICONS[name]));
       });

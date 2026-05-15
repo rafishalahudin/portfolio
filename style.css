@@ -528,132 +528,183 @@ body {
 .experience { background: var(--bg); }
 
 .timeline {
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 0;
+}
+
+/* Vertical connecting line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 215px;
+  top: 16px;
+  bottom: 16px;
+  width: 1px;
+  background: linear-gradient(to bottom,
+    transparent,
+    var(--border) 8%,
+    var(--border) 92%,
+    transparent
+  );
 }
 
 .timeline-item {
   display: grid;
   grid-template-columns: 200px 1fr;
-  gap: 48px;
-  padding: 40px 0;
-  border-top: 1px solid var(--border);
+  gap: 0 60px;
+  padding: 36px 0;
+  position: relative;
 }
 
-.timeline-item:last-child {
-  border-bottom: 1px solid var(--border);
+/* Dot on the vertical line */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 208px;
+  top: 44px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--bg-2);
+  border: 2px solid var(--border);
+  z-index: 1;
+  transition: border-color 0.3s;
+}
+
+/* Current role — glowing accent dot */
+.timeline-item:first-child::before {
+  background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(200,184,154,0.15), 0 0 16px rgba(200,184,154,0.25);
 }
 
 .timeline-meta {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  padding-top: 4px;
+  padding-top: 6px;
+  text-align: right;
+  padding-right: 0;
 }
 
 .timeline-date {
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--accent);
   letter-spacing: 0.04em;
+  line-height: 1.4;
 }
 
 .timeline-loc {
-  font-size: 11px;
+  font-size: 10px;
+  font-weight: 700;
   color: var(--text-dim);
-  letter-spacing: 0.06em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
+.timeline-body {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--border);
+  border-radius: 14px;
+  padding: 26px 30px 28px;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.timeline-item:first-child .timeline-body {
+  border-left-color: var(--accent);
+  box-shadow: -4px 0 24px rgba(200,184,154,0.06);
+}
+
+.timeline-item:hover .timeline-body {
+  border-color: rgba(255,255,255,0.12);
+  border-left-color: var(--accent);
+}
+
+.timeline-item:hover::before {
+  border-color: var(--accent);
+}
+
 .timeline-role {
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 19px;
+  font-weight: 800;
   color: var(--text);
-  margin-bottom: 4px;
-  letter-spacing: -0.01em;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 
 .timeline-company-logo {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--border-light);
 }
 
 .company-logo {
-  height: 22px;
+  height: 20px;
   width: auto;
   object-fit: contain;
-  filter: brightness(0) invert(1) opacity(0.55);
+  filter: brightness(0) invert(1) opacity(0.45);
   transition: filter 0.2s;
 }
 
-.timeline-item:hover .company-logo {
-  filter: brightness(0) invert(1) opacity(0.85);
-}
+.timeline-item:hover .company-logo { filter: brightness(0) invert(1) opacity(0.8); }
 
-/* Algoritma — colour logo that needs forcing to white */
-.company-logo--white {
-  filter: brightness(0) invert(1) opacity(0.55);
-}
-.timeline-item:hover .company-logo--white {
-  filter: brightness(0) invert(1) opacity(0.85);
-}
+.company-logo--white { filter: brightness(0) invert(1) opacity(0.45); }
+.timeline-item:hover .company-logo--white { filter: brightness(0) invert(1) opacity(0.8); }
 
-/* Skilvul — already has colour; render white */
 .company-logo--skilvul {
   height: 20px;
-  filter: brightness(0) invert(1) opacity(0.55);
+  filter: brightness(0) invert(1) opacity(0.45);
 }
-.timeline-item:hover .company-logo--skilvul {
-  filter: brightness(0) invert(1) opacity(0.85);
-}
+.timeline-item:hover .company-logo--skilvul { filter: brightness(0) invert(1) opacity(0.8); }
 
-/* UPI — SVG crest, slightly taller */
 .company-logo--upi {
   height: 26px;
-  filter: brightness(0) invert(1) opacity(0.55);
+  filter: brightness(0) invert(1) opacity(0.45);
 }
-.timeline-item:hover .company-logo--upi {
-  filter: brightness(0) invert(1) opacity(0.85);
-}
+.timeline-item:hover .company-logo--upi { filter: brightness(0) invert(1) opacity(0.8); }
 
 .timeline-company {
   font-size: 13px;
-  font-weight: 500;
-  color: var(--accent);
-  letter-spacing: 0.04em;
-  margin-bottom: 0;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
 }
 
 .timeline-points {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
 .timeline-points li {
-  font-size: 14px;
-  line-height: 1.75;
-  color: rgba(240,237,232,0.62);
-  padding-left: 16px;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: rgba(240,237,232,0.58);
+  padding-left: 20px;
   position: relative;
 }
 
 .timeline-points li strong {
-  color: rgba(240,237,232,0.92);
+  color: rgba(240,237,232,0.88);
   font-weight: 600;
 }
 
 .timeline-points li::before {
-  content: '—';
+  content: '▸';
   position: absolute;
   left: 0;
-  color: var(--text-dim);
-  font-size: 12px;
-  top: 2px;
+  color: var(--accent);
+  font-size: 11px;
+  top: 3px;
+  opacity: 0.7;
 }
 
 /* ── ORGANIZATIONAL ── */
@@ -1887,8 +1938,11 @@ body {
   .org-grid { grid-template-columns: 1fr; }
   .work-card--wide { grid-template-columns: 1fr; }
   .work-card--wide .work-img-wrap { min-height: 220px; aspect-ratio: 16/9; }
-  .timeline-item { grid-template-columns: 1fr; gap: 12px; }
-  .timeline-meta { flex-direction: row; gap: 16px; align-items: center; }
+  .timeline::before { display: none; }
+  .timeline-item { grid-template-columns: 1fr; gap: 12px; padding: 28px 0; }
+  .timeline-item::before { display: none; }
+  .timeline-body { border-left-width: 3px; }
+  .timeline-meta { flex-direction: row; gap: 16px; align-items: center; text-align: left; }
   .contact-details { flex-direction: column; gap: 28px; }
 }
 
@@ -1993,9 +2047,10 @@ body {
   .tag { font-size: 11px; padding: 5px 12px; }
 
   /* TIMELINE */
-  .timeline-item { padding: 28px 0; }
-  .timeline-role { font-size: 17px; }
-  .timeline-points li { font-size: 13px; }
+  .timeline-item { padding: 20px 0; }
+  .timeline-role { font-size: 16px; }
+  .timeline-body { padding: 20px 22px 22px; }
+  .timeline-points li { font-size: 12.5px; }
 
   /* ORG */
   .org-card { padding: 28px 24px; }

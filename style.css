@@ -2637,9 +2637,20 @@ body {
   border-color: rgba(0,0,0,0.14);
 }
 
-/* ── LIGHT MODE: TECH STACK HOVER ── */
+/* ── LIGHT MODE: TECH STACK ── */
+[data-theme="light"] .techstack-card {
+  background: #fff;
+  border-color: rgba(0,0,0,0.1);
+}
 [data-theme="light"] .techstack-card:hover {
-  border-color: rgba(0,0,0,0.2);
+  border-color: rgba(0,0,0,0.22);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+}
+[data-theme="light"] .techstack-name {
+  color: var(--text) !important;
+}
+[data-theme="light"] .techstack-logo--text {
+  filter: brightness(0.75) saturate(1.4);
 }
 
 /* ── LIGHT MODE: SKILL GROUP ICON BACKGROUNDS ── */

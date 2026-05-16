@@ -1192,6 +1192,11 @@ body {
   margin-bottom: 0;
 }
 
+.edu-left .section-sub {
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+
 .edu-card {
   padding: 48px;
   border: 1px solid rgba(0,0,0,0.08);

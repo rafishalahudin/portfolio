@@ -55,7 +55,7 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=League+Spartan:wght@700;800;900&display=swap" rel="stylesheet" />
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 </head>
 <body>
@@ -69,60 +69,81 @@
 
     <nav class="nav">
       <div class="nav-left">
+        <button class="nav-hamburger" id="hamburgerBtn" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
         <a href="#home" class="nav-brand">
-          <img src="logo-rafi.png" alt="Rafi" class="nav-logo-img" />
-          <span class="nav-brand-text">Rafi Shalahudin</span>
+          <span class="nav-brand-text">RAFI</span>
         </a>
-      </div>
-
-      <div class="nav-center">
-        <a href="#about" class="nav-link">ABOUT</a>
-        <div class="nav-star">✦</div>
-        <a href="#experience" class="nav-link">EXPERIENCE</a>
-        <div class="nav-star">✦</div>
-        <a href="#contact" class="nav-link">CONTACT</a>
       </div>
 
       <div class="nav-right">
         <button class="nav-theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
-          <svg class="icon-sun" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="6.34" y2="6.34"/><line x1="17.66" y1="17.66" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="6.34" y2="17.66"/><line x1="17.66" y1="6.34" x2="19.07" y2="4.93"/></svg>
-          <svg class="icon-moon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-          <span class="theme-label">Dark</span>
+          <svg class="icon-sun" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="6.34" y2="6.34"/><line x1="17.66" y1="17.66" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="6.34" y2="17.66"/><line x1="17.66" y1="6.34" x2="19.07" y2="4.93"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="nav-lang-toggle" id="navLangToggle" aria-label="Toggle language">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span class="nav-lang-label" id="navLangLabel">EN</span>
         </button>
         <a href="https://mail.google.com/mail/?view=cm&to=rafisalahudin248@gmail.com" target="_blank" rel="noopener noreferrer" class="nav-cta"><i data-lucide="mail"></i><span class="nav-cta-text"> Contact Me</span></a>
-        <button class="nav-hamburger" id="hamburgerBtn" aria-label="Open menu">
-          <span></span><span></span><span></span>
-        </button>
       </div>
     </nav>
 
     <!-- Mobile menu overlay -->
     <div class="mobile-menu" id="mobileMenu">
-      <button class="mobile-menu-close" id="menuClose" aria-label="Close menu">✕</button>
-      <div class="mobile-theme-row">
-        <span class="mobile-theme-label">Theme</span>
-        <button class="mobile-theme-btn" id="mobileThemeToggle" aria-label="Toggle theme">
-          <svg class="icon-sun" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-          <svg class="icon-moon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-          <span class="mobile-theme-mode-label"></span>
-        </button>
+      <!-- Top bar mirrors navbar -->
+      <div class="mobile-menu-topbar">
+        <div class="mobile-menu-topbar-left">
+          <button class="mobile-menu-close" id="menuClose" aria-label="Close menu">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+          <a href="#home" class="nav-brand" data-close>
+            <span class="nav-brand-text">RAFI</span>
+          </a>
+        </div>
+        <div class="mobile-menu-topbar-right">
+          <button class="nav-theme-toggle" id="mobileThemeToggle" aria-label="Toggle theme">
+            <svg class="icon-sun" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="6.34" y2="6.34"/><line x1="17.66" y1="17.66" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="6.34" y2="17.66"/><line x1="17.66" y1="6.34" x2="19.07" y2="4.93"/></svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <button class="nav-lang-toggle" id="mobileLangToggle" aria-label="Toggle language">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span class="nav-lang-label" id="mobileLangLabel">EN</span>
+          </button>
+          <a href="https://mail.google.com/mail/?view=cm&to=rafisalahudin248@gmail.com" target="_blank" rel="noopener noreferrer" class="nav-cta" data-close><i data-lucide="mail"></i><span class="nav-cta-text" data-i18n="contact-me"> Contact Me</span></a>
+        </div>
       </div>
-      <a href="#home" class="mobile-menu-link" data-close>Portfolio</a>
-      <a href="#about" class="mobile-menu-link" data-close>About</a>
-      <a href="#experience" class="mobile-menu-link" data-close>Experience</a>
-      <a href="#skills" class="mobile-menu-link" data-close>Skills</a>
-      <a href="#achievements" class="mobile-menu-link" data-close>Achievements</a>
-      <a href="#portfolio" class="mobile-menu-link" data-close>Portfolio</a>
-      <a href="#writing" class="mobile-menu-link" data-close>Writing</a>
-      <a href="#videos" class="mobile-menu-link" data-close>Videos</a>
-      <a href="#techstack" class="mobile-menu-link" data-close>Tech Stack</a>
-      <a href="#contact" class="mobile-menu-link" data-close>Contact</a>
-      <a href="https://mail.google.com/mail/?view=cm&to=rafisalahudin248@gmail.com" target="_blank" rel="noopener noreferrer" class="mobile-menu-email" data-close>
-        <i data-lucide="mail"></i> rafisalahudin248@gmail.com
-      </a>
-      <div class="mobile-menu-socials">
-        <a href="https://linkedin.com/in/rafishalahudin" target="_blank"><i data-lucide="linkedin"></i> LinkedIn</a>
-        <a href="https://instagram.com/rafishalahudin" target="_blank"><i data-lucide="instagram"></i> Instagram</a>
+
+      <!-- Nav links -->
+      <nav class="mobile-menu-nav">
+        <a href="#home" class="mobile-menu-link" data-close><span data-i18n="nav-portfolio">Portfolio</span><svg class="menu-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="#about" class="mobile-menu-link" data-close><span data-i18n="nav-about">About</span><svg class="menu-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="#experience" class="mobile-menu-link" data-close><span data-i18n="nav-experience">Experience</span><svg class="menu-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="#skills" class="mobile-menu-link" data-close><span data-i18n="nav-skills">Skills</span><svg class="menu-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="#achievements" class="mobile-menu-link" data-close><span data-i18n="nav-achievements">Achievements</span><svg class="menu-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="#portfolio" class="mobile-menu-link" data-close><span data-i18n="nav-works">Works</span><svg class="menu-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="#writing" class="mobile-menu-link" data-close><span data-i18n="nav-writing">Writing</span><svg class="menu-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="#videos" class="mobile-menu-link" data-close><span data-i18n="nav-videos">Videos</span><svg class="menu-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="#techstack" class="mobile-menu-link" data-close><span data-i18n="nav-techstack">Tech Stack</span><svg class="menu-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="#contact" class="mobile-menu-link" data-close><span data-i18n="nav-contact">Contact</span><svg class="menu-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></a>
+      </nav>
+
+      <!-- Footer -->
+      <div class="mobile-menu-footer">
+        <a href="https://mail.google.com/mail/?view=cm&to=rafisalahudin248@gmail.com" target="_blank" rel="noopener noreferrer" class="mobile-menu-email" data-close>
+          <i data-lucide="mail"></i> rafisalahudin248@gmail.com
+        </a>
+        <div class="mobile-menu-bottom">
+          <div class="mobile-menu-socials">
+            <a href="https://linkedin.com/in/rafishalahudin" target="_blank"><i data-lucide="linkedin"></i> LinkedIn</a>
+            <a href="https://instagram.com/rafishalahudin" target="_blank"><i data-lucide="instagram"></i> Instagram</a>
+          </div>
+          <button class="mobile-lang-toggle" id="langToggle" aria-label="Toggle language">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span id="langLabel">Indonesia (English)</span>
+          </button>
+        </div>
       </div>
     </div>
 
@@ -267,11 +288,11 @@
 
         <div class="timeline-item">
           <div class="timeline-meta">
-            <span class="timeline-date">09/2023 — Present</span>
-            <span class="timeline-loc">Jakarta</span>
+            <span class="timeline-date"><i data-lucide="calendar" class="meta-icon"></i> 09/2023 — <span data-i18n="exp-present">Present</span></span>
+            <span class="timeline-loc"><i data-lucide="map-pin" class="meta-icon"></i> Jakarta</span>
           </div>
           <div class="timeline-body">
-            <h3 class="timeline-role">Stock Analyst & Distribution Supervisor</h3>
+            <h3 class="timeline-role" data-i18n="exp-role-1">Stock Analyst & Distribution Supervisor</h3>
             <div class="timeline-company-logo">
               <img src="https://www.erajaya.com/assets/img/logo.png"
                    data-dark-src="https://www.erajaya.com/assets/img/logo.png"
@@ -279,7 +300,7 @@
                    alt="Erajaya Swasembada" class="company-logo logo-theme-aware" />
               <span class="timeline-company">Erajaya Swasembada</span>
             </div>
-            <ul class="timeline-points">
+            <ul class="timeline-points" data-i18n="exp-points-1">
               <li><strong>Nationwide allocation:</strong> Own end-to-end product distribution for 3 major brands (Apple, Microsoft, McAfee) across ~500 SKUs, serving 1,300+ stores in 2 business units (Erafone & iBox) throughout Indonesia.</li>
               <li><strong>Audit score improvement:</strong> Leveraged BlueYonder auto-allocation to optimize in-store stock levels, raising iBox merchandising audit compliance by approximately 30–40%.</li>
               <li><strong>Automated reporting pipeline:</strong> Built internal tools using React, Vite, and Python that replaced manual data extraction and Excel templating, reducing report generation from hours of manual work to seconds.</li>
@@ -290,11 +311,11 @@
 
         <div class="timeline-item">
           <div class="timeline-meta">
-            <span class="timeline-date">07/2023 — 09/2023</span>
-            <span class="timeline-loc">Jakarta</span>
+            <span class="timeline-date"><i data-lucide="calendar" class="meta-icon"></i> 07/2023 — 09/2023</span>
+            <span class="timeline-loc"><i data-lucide="map-pin" class="meta-icon"></i> Jakarta</span>
           </div>
           <div class="timeline-body">
-            <h3 class="timeline-role">Merchandising Support Supervisor</h3>
+            <h3 class="timeline-role" data-i18n="exp-role-2">Merchandising Support Supervisor</h3>
             <div class="timeline-company-logo">
               <img src="https://www.erajaya.com/assets/img/logo.png"
                    data-dark-src="https://www.erajaya.com/assets/img/logo.png"
@@ -302,7 +323,7 @@
                    alt="Erajaya Swasembada" class="company-logo logo-theme-aware" />
               <span class="timeline-company">Erajaya Swasembada</span>
             </div>
-            <ul class="timeline-points">
+            <ul class="timeline-points" data-i18n="exp-points-2">
               <li>Led strategic planogram development across iBox, Erafone, and Samsung Experience Stores in Eastern West Java and Western Central Java.</li>
               <li>Managed planogram execution consistency to optimize product displays and maximize sales opportunities.</li>
             </ul>
@@ -311,16 +332,16 @@
 
         <div class="timeline-item">
           <div class="timeline-meta">
-            <span class="timeline-date">04/2022 — 07/2023</span>
-            <span class="timeline-loc">Jakarta</span>
+            <span class="timeline-date"><i data-lucide="calendar" class="meta-icon"></i> 04/2022 — 07/2023</span>
+            <span class="timeline-loc"><i data-lucide="map-pin" class="meta-icon"></i> Jakarta</span>
           </div>
           <div class="timeline-body">
-            <h3 class="timeline-role">Graphic Designer</h3>
+            <h3 class="timeline-role" data-i18n="exp-role-3">Graphic Designer</h3>
             <div class="timeline-company-logo">
               <img src="https://k4all.org/wp-content/uploads/logos/Academia/Asia_Indonesia_Academy_Algorithma%20Data%20Science%20Academy_logo.png" alt="Algoritma Data Science School" class="company-logo company-logo--white" />
               <span class="timeline-company">Algoritma Data Science School</span>
             </div>
-            <ul class="timeline-points">
+            <ul class="timeline-points" data-i18n="exp-points-3">
               <li>Led production of promotional ads and visual content, creating up to 3 items per day.</li>
               <li>Directed end-to-end printed materials production across 3 departments, achieving 80% design completion per request.</li>
             </ul>
@@ -329,13 +350,13 @@
 
         <div class="timeline-item">
           <div class="timeline-meta">
-            <span class="timeline-date">01/2021 — 12/2021</span>
-            <span class="timeline-loc">Bandung</span>
+            <span class="timeline-date"><i data-lucide="calendar" class="meta-icon"></i> 01/2021 — 12/2021</span>
+            <span class="timeline-loc"><i data-lucide="map-pin" class="meta-icon"></i> Bandung</span>
           </div>
           <div class="timeline-body">
-            <h3 class="timeline-role">Public Relation Intern</h3>
+            <h3 class="timeline-role" data-i18n="exp-role-4">Public Relation Intern</h3>
             <p class="timeline-company">Ratisa Media Citra</p>
-            <ul class="timeline-points">
+            <ul class="timeline-points" data-i18n="exp-points-4">
               <li>Conducted media monitoring for Ditjen Vokasi and Ditjen Dikti, managing 50+ news items daily.</li>
               <li>Developed and launched 3 websites and created 1 UX landing page for IMBEX 2023.</li>
               <li>Designed internal audit for the Ministry of Communication and Informatics — 100+ page report.</li>
@@ -345,16 +366,16 @@
 
         <div class="timeline-item">
           <div class="timeline-meta">
-            <span class="timeline-date">08/2021 — 12/2021</span>
-            <span class="timeline-loc">Jakarta</span>
+            <span class="timeline-date"><i data-lucide="calendar" class="meta-icon"></i> 08/2021 — 12/2021</span>
+            <span class="timeline-loc"><i data-lucide="map-pin" class="meta-icon"></i> Jakarta</span>
           </div>
           <div class="timeline-body">
-            <h3 class="timeline-role">UX Designer Intern</h3>
+            <h3 class="timeline-role" data-i18n="exp-role-5">UX Designer Intern</h3>
             <div class="timeline-company-logo">
               <img src="skilvul-white.svg" alt="Skilvul" class="company-logo company-logo--skilvul" />
               <span class="timeline-company">Skilvul | PT. Impactbyte Teknologi Edukasi</span>
             </div>
-            <ul class="timeline-points">
+            <ul class="timeline-points" data-i18n="exp-points-5">
               <li>Revamped Kitabisa UI/UX news page — enhanced 30 frames for improved user experience.</li>
               <li>Conceptualized and designed Liharama, an education app with 5+ features.</li>
             </ul>
@@ -363,16 +384,16 @@
 
         <div class="timeline-item">
           <div class="timeline-meta">
-            <span class="timeline-date">02/2020 — 12/2021</span>
-            <span class="timeline-loc">Bandung</span>
+            <span class="timeline-date"><i data-lucide="calendar" class="meta-icon"></i> 02/2020 — 12/2021</span>
+            <span class="timeline-loc"><i data-lucide="map-pin" class="meta-icon"></i> Bandung</span>
           </div>
           <div class="timeline-body">
-            <h3 class="timeline-role">Administrative Intern</h3>
+            <h3 class="timeline-role" data-i18n="exp-role-6">Administrative Intern</h3>
             <div class="timeline-company-logo">
               <img src="https://upload.wikimedia.org/wikipedia/id/0/09/Logo_Almamater_UPI.svg" alt="UPI" class="company-logo company-logo--upi" />
               <span class="timeline-company">Office of Communication Dept. UPI</span>
             </div>
-            <ul class="timeline-points">
+            <ul class="timeline-points" data-i18n="exp-points-6">
               <li>Conducted comprehensive design work (3/day) and internal quality audits for strategic decision-making.</li>
             </ul>
           </div>
@@ -397,10 +418,10 @@
             <h3 class="org-role">President</h3>
           </div>
           <p class="org-name">BEM Himikasi UPI · Bandung</p>
-          <ul class="org-points">
-            <li>Facilitated communication between 5 divisions with 128 staff members.</li>
-            <li>Achieved 80% staff satisfaction rate through effective teamwork.</li>
-            <li>Managed 10 online events with 80+ participants each.</li>
+          <ul class="org-points" data-i18n="org-points-1">
+            <li>Kept 5 divisions and 128 members aligned — made sure everyone knew what they were doing and why it mattered.</li>
+            <li>Hit 80% staff satisfaction by building a culture where people actually wanted to show up.</li>
+            <li>Pulled off 10 online events with 80+ participants each, all during peak COVID restrictions.</li>
           </ul>
         </div>
         <div class="org-card">
@@ -412,8 +433,8 @@
             <h3 class="org-role">Leader of Creative Division</h3>
           </div>
           <p class="org-name">Generasi Baru Indonesia UPI · Bandung</p>
-          <ul class="org-points">
-            <li>Led creation of 100+ poster designs and produced 3 videos including live-streaming services.</li>
+          <ul class="org-points" data-i18n="org-points-2">
+            <li>Created 100+ poster designs and produced 3 videos — including full live-streaming setups built from scratch.</li>
           </ul>
         </div>
       </div>
@@ -512,8 +533,8 @@
               <span class="work-tag">SAP</span>
               <span class="work-tag">Supply Chain</span>
             </div>
-            <h3 class="work-title">Retail Inventory Control Dashboard</h3>
-            <p class="work-desc">End-to-end planogram compliance monitoring across all Erajaya channels — tracking hit percentage, ATP vs DOS, stock spreading, and PIC performance by brand and week.</p>
+            <h3 class="work-title" data-i18n="work-title-1">Retail Inventory Control Dashboard</h3>
+            <p class="work-desc" data-i18n="work-desc-1">End-to-end planogram compliance monitoring across all Erajaya channels — tracking hit percentage, ATP vs DOS, stock spreading, and PIC performance by brand and week.</p>
           </div>
         </div>
 
@@ -531,8 +552,8 @@
               <span class="work-tag">WordPress</span>
               <span class="work-tag">Media</span>
             </div>
-            <h3 class="work-title">GPRTV Video Tracking Dashboard</h3>
-            <p class="work-desc">Content progress tracker for 11,631 videos across WordPress — visualizing upload status, sub-cluster breakdowns, and coordinator performance by team member.</p>
+            <h3 class="work-title" data-i18n="work-title-2">GPRTV Video Tracking Dashboard</h3>
+            <p class="work-desc" data-i18n="work-desc-2">Content progress tracker for 11,631 videos across WordPress — visualizing upload status, sub-cluster breakdowns, and coordinator performance by team member.</p>
           </div>
         </div>
 
@@ -550,8 +571,8 @@
               <span class="work-tag">SAP</span>
               <span class="work-tag">Inventory</span>
             </div>
-            <h3 class="work-title">RICO · NPI Accessories Monitor</h3>
-            <p class="work-desc">New Product Introduction monitoring dashboard for accessories across 1,484 stores — tracking GR, GI, allocation, and SKU status by brand, system, and warehouse location.</p>
+            <h3 class="work-title" data-i18n="work-title-3">RICO · NPI Accessories Monitor</h3>
+            <p class="work-desc" data-i18n="work-desc-3">New Product Introduction monitoring dashboard for accessories across 1,484 stores — tracking GR, GI, allocation, and SKU status by brand, system, and warehouse location.</p>
           </div>
         </div>
 
@@ -570,8 +591,8 @@
               <span class="work-tag">Tableau</span>
               <span class="work-tag">Operations</span>
             </div>
-            <h3 class="work-title">New Store Monitor</h3>
-            <p class="work-desc">Real-time store readiness dashboard built with React JS — tracking 100 new stores across iBox, Erafone, and Samsung channels with allocation matrix, deadline status, and brand readiness flags.</p>
+            <h3 class="work-title" data-i18n="work-title-4">New Store Monitor</h3>
+            <p class="work-desc" data-i18n="work-desc-4">Real-time store readiness dashboard built with React JS — tracking 100 new stores across iBox, Erafone, and Samsung channels with allocation matrix, deadline status, and brand readiness flags.</p>
           </div>
         </div>
 
@@ -584,8 +605,8 @@
               <span class="work-tag">Prototype</span>
               <span class="work-tag">Ads</span>
             </div>
-            <h3 class="work-title">Arvento Ads — Interactive Prototype</h3>
-            <p class="work-desc">Full interactive UI prototype for Arvento Ads — built and clickable inside Figma. Explore the user flow directly below.</p>
+            <h3 class="work-title" data-i18n="work-title-5">Arvento Ads — Interactive Prototype</h3>
+            <p class="work-desc" data-i18n="work-desc-5">Full interactive UI prototype for Arvento Ads — built and clickable inside Figma. Explore the user flow directly below.</p>
           </div>
           <div class="figma-embed-wrap">
             <iframe

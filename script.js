@@ -136,6 +136,274 @@ mobileMenu.querySelectorAll('[data-close]').forEach(link => {
   link.addEventListener('click', closeMenu);
 });
 
+// ── LANGUAGE TOGGLE ──
+(function () {
+  const translations = {
+    en: {
+      'nav-portfolio':    'Portfolio',
+      'nav-about':        'About',
+      'nav-experience':   'Experience',
+      'nav-skills':       'Skills',
+      'nav-achievements': 'Achievements',
+      'nav-works':        'Works',
+      'nav-writing':      'Writing',
+      'nav-videos':       'Videos',
+      'nav-techstack':    'Tech Stack',
+      'nav-contact':      'Contact',
+      'contact-me':       ' Contact Me',
+      'hero-greeting':    "Hi, I'm",
+      'hero-subtitle':    'Where Supply Chain<br>Meets Code & Data',
+      'hero-sub':         "Supply Chain Supervisor and Front End Developer — I build tools, dashboards, and data systems that keep Indonesia's leading retail networks running efficiently.",
+      'hero-btn':         'View My Work →',
+      'hero-tagline':     'Operational efficiency through data and design',
+      'section-about':    '01 — About',
+      'about-title':      'Behind the Work',
+      'about-p1':         "I'm <strong>Muhammad Rafi Shalahudin</strong>, a Supply Chain Supervisor and Front End Developer based in Jakarta. I sit at the intersection of operations and technology — managing distribution networks by day and building internal tools, dashboards, and web apps with React, Vite, and Python.",
+      'about-p2':         'At Erajaya Swasembada, I oversee product allocation for Apple, premium audio, and gaming brands — and when the tools didn\'t exist, I built them. Tableau, SAP, Looker Studio, and custom-built apps keep our retail network of 1,300+ stores running on data, not guesswork.',
+      'section-skills':   '02 — Skills',
+      'skills-title':     'What I Work With',
+      'section-exp':      '03 — Experience',
+      'exp-title':        'Career Journey',
+      'exp-present':      'Present',
+      'section-org':      '04 — Leadership',
+      'org-title':        'Organizational Experience',
+      'org-points-1':     '<li>Kept 5 divisions and 128 members aligned — made sure everyone knew what they were doing and why it mattered.</li><li>Hit 80% staff satisfaction by building a culture where people actually wanted to show up.</li><li>Pulled off 10 online events with 80+ participants each, all during peak COVID restrictions.</li>',
+      'org-points-2':     '<li>Created 100+ poster designs and produced 3 videos — including full live-streaming setups built from scratch.</li>',
+      'section-achieve':  '05 — Achievements',
+      'achieve-title':    'Recognition & Awards',
+      'section-edu':      '06 — Education',
+      'edu-title':        'Academic Background',
+      'section-works':    '07 — Selected Works',
+      'works-title':      'Dashboards & Tools I Built',
+      'section-portfolio':'08 — Portfolio',
+      'portfolio-title':  'Creative Work',
+      'portfolio-link':   'View on Behance ↗',
+      'section-writing':  '09 — Writing',
+      'writing-title':    'Latest Articles',
+      'writing-link':     'Read on Medium ↗',
+      'section-videos':   '10 — Videos',
+      'videos-title':     'Latest Videos',
+      'videos-link':      'Watch on YouTube ↗',
+      'section-techstack':'11 — Tech Stack',
+      'techstack-title':  'Skills',
+      'section-contact':  '12 — Contact',
+      'contact-title':    "Let's Connect",
+      'contact-sub':      'Open to new opportunities in Supply Chain, Operations, and Data Analytics roles.',
+      'exp-role-1':       'Stock Analyst & Distribution Supervisor',
+      'exp-points-1':     '<li><strong>Alokasi nasional:</strong> Mengelola distribusi produk end-to-end untuk 3 merek utama (Apple, Microsoft, McAfee) dengan ~500 SKU, melayani 1.300+ toko di 2 unit bisnis (Erafone & iBox) di seluruh Indonesia.</li><li><strong>Peningkatan skor audit:</strong> Memanfaatkan auto-alokasi BlueYonder untuk mengoptimalkan stok di toko, meningkatkan kepatuhan audit merchandising iBox sekitar 30–40%.</li><li><strong>Otomasi pipeline laporan:</strong> Membangun alat internal menggunakan React, Vite, dan Python yang menggantikan ekstraksi data manual dan templating Excel, mempersingkat pembuatan laporan dari berjam-jam menjadi hitungan detik.</li><li><strong>6 dashboard live:</strong> Merancang dan memelihara 1 dashboard Tableau dan 5 Looker Studio yang memberikan visibilitas real-time terhadap pergerakan stok, akurasi alokasi, dan KPI distribusi di semua saluran.</li>',
+      'exp-role-2':       'Merchandising Support Supervisor',
+      'exp-points-2':     '<li>Memimpin pengembangan planogram strategis di iBox, Erafone, dan Samsung Experience Store di wilayah Jawa Barat Timur dan Jawa Tengah Barat.</li><li>Mengelola konsistensi eksekusi planogram untuk mengoptimalkan tampilan produk dan memaksimalkan peluang penjualan.</li>',
+      'exp-role-3':       'Graphic Designer',
+      'exp-points-3':     '<li>Memimpin produksi iklan promosi dan konten visual, menghasilkan hingga 3 karya per hari.</li><li>Mengarahkan produksi materi cetak end-to-end untuk 3 departemen, dengan tingkat penyelesaian desain 80% per permintaan.</li>',
+      'exp-role-4':       'Public Relation Intern',
+      'exp-points-4':     '<li>Melakukan pemantauan media untuk Ditjen Vokasi dan Ditjen Dikti, mengelola 50+ berita per hari.</li><li>Mengembangkan dan meluncurkan 3 website serta membuat 1 landing page UX untuk IMBEX 2023.</li><li>Merancang audit internal untuk Kementerian Komunikasi dan Informatika — laporan 100+ halaman.</li>',
+      'exp-role-5':       'UX Designer Intern',
+      'exp-points-5':     '<li>Merombak halaman berita UI/UX Kitabisa — menyempurnakan 30 frame untuk pengalaman pengguna yang lebih baik.</li><li>Mengonsep dan merancang Liharama, aplikasi edukasi dengan 5+ fitur.</li>',
+      'exp-role-6':       'Administrative Intern',
+      'exp-points-6':     '<li>Melakukan pekerjaan desain komprehensif (3/hari) dan audit kualitas internal untuk pengambilan keputusan strategis.</li>',
+      'work-title-1':     'Retail Inventory Control Dashboard',
+      'work-desc-1':      'End-to-end planogram compliance monitoring across all Erajaya channels — tracking hit percentage, ATP vs DOS, stock spreading, and PIC performance by brand and week.',
+      'work-title-2':     'GPRTV Video Tracking Dashboard',
+      'work-desc-2':      'Content progress tracker for 11,631 videos across WordPress — visualizing upload status, sub-cluster breakdowns, and coordinator performance by team member.',
+      'work-title-3':     'RICO · NPI Accessories Monitor',
+      'work-desc-3':      'New Product Introduction monitoring dashboard for accessories across 1,484 stores — tracking GR, GI, allocation, and SKU status by brand, system, and warehouse location.',
+      'work-title-4':     'New Store Monitor',
+      'work-desc-4':      'Real-time store readiness dashboard built with React JS — tracking 100 new stores across iBox, Erafone, and Samsung channels with allocation matrix, deadline status, and brand readiness flags.',
+      'work-title-5':     'Arvento Ads — Interactive Prototype',
+      'work-desc-5':      'Full interactive UI prototype for Arvento Ads — built and clickable inside Figma. Explore the user flow directly below.',
+    },
+    id: {
+      'nav-portfolio':    'Portfolio',
+      'nav-about':        'Tentang',
+      'nav-experience':   'Pengalaman',
+      'nav-skills':       'Keahlian',
+      'nav-achievements': 'Pencapaian',
+      'nav-works':        'Karya',
+      'nav-writing':      'Tulisan',
+      'nav-videos':       'Video',
+      'nav-techstack':    'Tech Stack',
+      'nav-contact':      'Kontak',
+      'contact-me':       ' Hubungi Saya',
+      'hero-greeting':    'Hai, saya',
+      'hero-subtitle':    'Supply Chain, Data,<br>dan Sedikit Coding',
+      'hero-sub':         'Supervisor Supply Chain yang juga bisa ngoding — dari distribusi dan alokasi stok, sampai bikin tools dan dashboard sendiri buat ratusan gerai ritel di Indonesia.',
+      'hero-btn':         'Lihat Karya Saya →',
+      'hero-tagline':     'Dari data ke keputusan yang tepat.',
+      'section-about':    '01 — Tentang',
+      'about-title':      'Di Balik Semua Ini',
+      'about-p1':         "Nama saya <strong>Muhammad Rafi Shalahudin</strong> — Supervisor Supply Chain sekaligus Front End Developer, berbasis di Jakarta. Saya berada di persimpangan antara operasional dan teknologi: mengelola jaringan distribusi sekaligus membangun tools, dashboard, dan web app dengan React, Vite, dan Python.",
+      'about-p2':         'Di Erajaya Swasembada, saya mengelola alokasi produk Apple, audio premium, dan gaming hardware — dan ketika tools yang dibutuhkan belum tersedia, saya membangunnya sendiri. Hasilnya: 1.300+ gerai ritel yang beroperasi berdasarkan data, bukan asumsi.',
+      'section-skills':   '02 — Keahlian',
+      'skills-title':     'Yang Saya Gunakan',
+      'section-exp':      '03 — Pengalaman',
+      'exp-title':        'Perjalanan Karier',
+      'exp-present':      'Sekarang',
+      'section-org':      '04 — Kepemimpinan',
+      'org-title':        'Pengalaman Organisasi',
+      'org-points-1':     '<li>Mengoordinasikan 5 divisi dan 128 anggota agar tetap selaras — memastikan setiap orang memahami perannya dan tujuan bersama.</li><li>Mencapai tingkat kepuasan anggota 80% dengan membangun budaya kerja yang inklusif dan mendorong kontribusi aktif.</li><li>Menyelenggarakan 10 acara online dengan 80+ peserta di tengah keterbatasan pandemi.</li>',
+      'org-points-2':     '<li>Menghasilkan 100+ desain poster dan memproduksi 3 video — termasuk membangun sistem live-streaming dari nol hingga siap tayang.</li>',
+      'section-achieve':  '05 — Pencapaian',
+      'achieve-title':    'Penghargaan & Prestasi',
+      'section-edu':      '06 — Pendidikan',
+      'edu-title':        'Latar Belakang Akademik',
+      'section-works':    '07 — Karya Pilihan',
+      'works-title':      'Dashboard & Tools yang Saya Buat',
+      'section-portfolio':'08 — Portofolio',
+      'portfolio-title':  'Karya Kreatif',
+      'portfolio-link':   'Lihat di Behance ↗',
+      'section-writing':  '09 — Tulisan',
+      'writing-title':    'Artikel Terbaru',
+      'writing-link':     'Baca di Medium ↗',
+      'section-videos':   '10 — Video',
+      'videos-title':     'Video Terbaru',
+      'videos-link':      'Tonton di YouTube ↗',
+      'section-techstack':'11 — Tech Stack',
+      'techstack-title':  'Keahlian',
+      'section-contact':  '12 — Kontak',
+      'contact-title':    'Mari Terhubung',
+      'contact-sub':      'Terbuka untuk peluang baru di bidang Supply Chain, Operasional, dan Analitik Data.',
+      'exp-role-1':       'Stock Analyst & Distribution Supervisor',
+      'exp-points-1':     '<li><strong>Alokasi nasional:</strong> Mengelola distribusi produk end-to-end untuk 3 merek utama (Apple, Microsoft, McAfee) dengan ~500 SKU, melayani 1.300+ toko di 2 unit bisnis (Erafone & iBox) di seluruh Indonesia.</li><li><strong>Peningkatan skor audit:</strong> Memanfaatkan auto-alokasi BlueYonder untuk mengoptimalkan stok di toko, meningkatkan kepatuhan audit merchandising iBox sekitar 30–40%.</li><li><strong>Otomasi pipeline laporan:</strong> Membangun alat internal menggunakan React, Vite, dan Python yang menggantikan ekstraksi data manual dan templating Excel, mempersingkat pembuatan laporan dari berjam-jam menjadi hitungan detik.</li><li><strong>6 dashboard live:</strong> Merancang dan memelihara 1 dashboard Tableau dan 5 Looker Studio yang memberikan visibilitas real-time terhadap pergerakan stok, akurasi alokasi, dan KPI distribusi di semua saluran.</li>',
+      'exp-role-2':       'Merchandising Support Supervisor',
+      'exp-points-2':     '<li>Memimpin pengembangan planogram strategis di iBox, Erafone, dan Samsung Experience Store di wilayah Jawa Barat Timur dan Jawa Tengah Barat.</li><li>Mengelola konsistensi eksekusi planogram untuk mengoptimalkan tampilan produk dan memaksimalkan peluang penjualan.</li>',
+      'exp-role-3':       'Graphic Designer',
+      'exp-points-3':     '<li>Memimpin produksi iklan promosi dan konten visual, menghasilkan hingga 3 karya per hari.</li><li>Mengarahkan produksi materi cetak end-to-end untuk 3 departemen, dengan tingkat penyelesaian desain 80% per permintaan.</li>',
+      'exp-role-4':       'Public Relation Intern',
+      'exp-points-4':     '<li>Melakukan pemantauan media untuk Ditjen Vokasi dan Ditjen Dikti, mengelola 50+ berita per hari.</li><li>Mengembangkan dan meluncurkan 3 website serta membuat 1 landing page UX untuk IMBEX 2023.</li><li>Merancang audit internal untuk Kementerian Komunikasi dan Informatika — laporan 100+ halaman.</li>',
+      'exp-role-5':       'UX Designer Intern',
+      'exp-points-5':     '<li>Merombak halaman berita UI/UX Kitabisa — menyempurnakan 30 frame untuk pengalaman pengguna yang lebih baik.</li><li>Mengonsep dan merancang Liharama, aplikasi edukasi dengan 5+ fitur.</li>',
+      'exp-role-6':       'Administrative Intern',
+      'exp-points-6':     '<li>Melakukan pekerjaan desain komprehensif (3/hari) dan audit kualitas internal untuk pengambilan keputusan strategis.</li>',
+      'work-title-1':     'Dashboard Kendali Inventori Ritel',
+      'work-desc-1':      'Pemantauan kepatuhan planogram end-to-end di seluruh kanal Erajaya — melacak hit percentage, ATP vs DOS, spreading stok, dan performa PIC per merek dan minggu.',
+      'work-title-2':     'Dashboard Tracking Video GPRTV',
+      'work-desc-2':      'Pelacak progres konten untuk 11.631 video di WordPress — memvisualisasikan status upload, breakdown sub-klaster, dan performa koordinator per anggota tim.',
+      'work-title-3':     'RICO · Monitor NPI Aksesori',
+      'work-desc-3':      'Dashboard pemantauan New Product Introduction untuk aksesori di 1.484 toko — melacak GR, GI, alokasi, dan status SKU per merek, sistem, dan lokasi gudang.',
+      'work-title-4':     'Monitor Toko Baru',
+      'work-desc-4':      'Dashboard kesiapan toko secara real-time yang dibangun dengan React JS — memantau 100 toko baru di kanal iBox, Erafone, dan Samsung dengan matriks alokasi, status tenggat waktu, dan indikator kesiapan merek.',
+      'work-title-5':     'Arvento Ads — Prototipe Interaktif',
+      'work-desc-5':      'Prototipe UI interaktif penuh untuk Arvento Ads — dibuat dan dapat diklik langsung di Figma. Jelajahi alur pengguna secara langsung di bawah ini.',
+    }
+  };
+
+  const i18nMap = {
+    'nav-portfolio':    '[data-i18n="nav-portfolio"]',
+    'nav-about':        '[data-i18n="nav-about"]',
+    'nav-experience':   '[data-i18n="nav-experience"]',
+    'nav-skills':       '[data-i18n="nav-skills"]',
+    'nav-achievements': '[data-i18n="nav-achievements"]',
+    'nav-works':        '[data-i18n="nav-works"]',
+    'nav-writing':      '[data-i18n="nav-writing"]',
+    'nav-videos':       '[data-i18n="nav-videos"]',
+    'nav-techstack':    '[data-i18n="nav-techstack"]',
+    'nav-contact':      '[data-i18n="nav-contact"]',
+    'contact-me':       '[data-i18n="contact-me"]',
+    'hero-greeting':    '.hero-greeting',
+    'hero-subtitle':    '.hero-subtitle',
+    'hero-sub':         '.hero-sub',
+    'hero-btn':         '.hero-btn',
+    'hero-tagline':     '.hero-tagline',
+    'section-about':    '.about .section-label',
+    'about-title':      '.about-title',
+    'about-p1':         '.about-text:nth-of-type(1)',
+    'about-p2':         '.about-text:nth-of-type(2)',
+    'section-skills':   '.skills .section-label',
+    'skills-title':     '.skills .section-title',
+    'section-exp':      '.experience .section-label',
+    'exp-title':        '.experience .section-title',
+    'exp-present':      '[data-i18n="exp-present"]',
+    'section-org':      '.org .section-label',
+    'org-title':        '.org .section-title',
+    'org-points-1':     '[data-i18n="org-points-1"]',
+    'org-points-2':     '[data-i18n="org-points-2"]',
+    'section-achieve':  '.achievements .section-label',
+    'achieve-title':    '.achievements .section-title',
+    'section-edu':      '.education .section-label',
+    'edu-title':        '.education .section-title',
+    'section-works':    '.works .section-label',
+    'works-title':      '.works .section-title',
+    'section-portfolio':'.portfolio-embed .section-label',
+    'portfolio-title':  '.portfolio-embed .section-title',
+    'portfolio-link':   '.behance-link',
+    'section-writing':  '.writing .section-label',
+    'writing-title':    '.writing .section-title',
+    'writing-link':     '.writing .content-ext-link',
+    'section-videos':   '.videos .section-label',
+    'videos-title':     '.videos .section-title',
+    'videos-link':      '.videos .content-ext-link',
+    'section-techstack':'.techstack .section-label',
+    'techstack-title':  '.techstack .section-title',
+    'section-contact':  '.contact .section-label',
+    'contact-title':    '.contact-title',
+    'contact-sub':      '.contact-sub',
+    'exp-role-1':       '[data-i18n="exp-role-1"]',
+    'exp-role-2':       '[data-i18n="exp-role-2"]',
+    'exp-role-3':       '[data-i18n="exp-role-3"]',
+    'exp-role-4':       '[data-i18n="exp-role-4"]',
+    'exp-role-5':       '[data-i18n="exp-role-5"]',
+    'exp-role-6':       '[data-i18n="exp-role-6"]',
+    'exp-points-1':     '[data-i18n="exp-points-1"]',
+    'exp-points-2':     '[data-i18n="exp-points-2"]',
+    'exp-points-3':     '[data-i18n="exp-points-3"]',
+    'exp-points-4':     '[data-i18n="exp-points-4"]',
+    'exp-points-5':     '[data-i18n="exp-points-5"]',
+    'exp-points-6':     '[data-i18n="exp-points-6"]',
+    'work-title-1':     '[data-i18n="work-title-1"]',
+    'work-desc-1':      '[data-i18n="work-desc-1"]',
+    'work-title-2':     '[data-i18n="work-title-2"]',
+    'work-desc-2':      '[data-i18n="work-desc-2"]',
+    'work-title-3':     '[data-i18n="work-title-3"]',
+    'work-desc-3':      '[data-i18n="work-desc-3"]',
+    'work-title-4':     '[data-i18n="work-title-4"]',
+    'work-desc-4':      '[data-i18n="work-desc-4"]',
+    'work-title-5':     '[data-i18n="work-title-5"]',
+    'work-desc-5':      '[data-i18n="work-desc-5"]',
+  };
+
+  const htmlKeys = new Set([
+    'hero-subtitle', 'about-p1', 'about-p2',
+    'exp-points-1', 'exp-points-2', 'exp-points-3',
+    'exp-points-4', 'exp-points-5', 'exp-points-6',
+    'org-points-1', 'org-points-2',
+  ]);
+
+  function applyLang(lang) {
+    const t = translations[lang];
+    Object.keys(i18nMap).forEach(key => {
+      document.querySelectorAll(i18nMap[key]).forEach(el => {
+        if (htmlKeys.has(key)) {
+          el.innerHTML = t[key];
+        } else {
+          el.textContent = t[key];
+        }
+      });
+    });
+    // Update all lang labels
+    const menuLabel = document.getElementById('langLabel');
+    if (menuLabel) menuLabel.textContent = lang === 'en' ? 'Indonesia (English)' : 'Indonesia (Bahasa)';
+    document.querySelectorAll('.nav-lang-label').forEach(el => {
+      el.textContent = lang === 'en' ? 'EN' : 'ID';
+    });
+    localStorage.setItem('lang', lang);
+  }
+
+  function toggleLang() {
+    const current = localStorage.getItem('lang') || 'en';
+    applyLang(current === 'en' ? 'id' : 'en');
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const saved = localStorage.getItem('lang') || 'en';
+    applyLang(saved);
+
+    ['langToggle', 'navLangToggle', 'mobileLangToggle'].forEach(id => {
+      const btn = document.getElementById(id);
+      if (btn) btn.addEventListener('click', toggleLang);
+    });
+  });
+})();
+
 // Smooth active nav highlight on scroll
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-link');

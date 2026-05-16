@@ -1169,7 +1169,7 @@ body {
 .edu-degree {
   font-size: 22px;
   font-weight: 800;
-  color: var(--text);
+  color: #111111;
   margin-bottom: 10px;
   letter-spacing: -0.02em;
   line-height: 1.25;
@@ -1181,7 +1181,7 @@ body {
   gap: 7px;
   font-size: 15px;
   font-weight: 500;
-  color: var(--text-muted);
+  color: #444444;
   margin-bottom: 6px;
 }
 .edu-school [data-lucide] { width: 15px; height: 15px; flex-shrink: 0; }
@@ -1191,7 +1191,7 @@ body {
   align-items: center;
   gap: 6px;
   font-size: 12px;
-  color: var(--text-dim);
+  color: #888888;
   letter-spacing: 0.04em;
 }
 .edu-location [data-lucide] { width: 12px; height: 12px; flex-shrink: 0; }

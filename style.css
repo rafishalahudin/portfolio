@@ -836,10 +836,11 @@ body {
 .timeline-item:hover .company-logo--white { filter: var(--filter-logo-white-hover); }
 
 .company-logo--skilvul {
-  height: 20px;
-  filter: var(--filter-logo-white);
+  height: 28px;
+  width: auto;
+  filter: none;
 }
-.timeline-item:hover .company-logo--skilvul { filter: var(--filter-logo-white-hover); }
+.timeline-item:hover .company-logo--skilvul { filter: brightness(1.1); }
 
 .company-logo--upi {
   height: 26px;
@@ -2548,12 +2549,8 @@ body {
   filter: opacity(1);
 }
 
-/* Skilvul is a white SVG — apply brand purple in light mode */
-[data-theme="light"] .company-logo--skilvul {
-  filter: brightness(0) invert(1) sepia(1) saturate(8) hue-rotate(240deg) brightness(0.7) opacity(0.9);
-}
 [data-theme="light"] .timeline-item:hover .company-logo--skilvul {
-  filter: brightness(0) invert(1) sepia(1) saturate(8) hue-rotate(240deg) brightness(0.85) opacity(1);
+  filter: brightness(1.1);
 }
 
 /* Notion icon from simpleicons is white — invert in light mode */

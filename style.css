@@ -1166,6 +1166,16 @@ body {
   font-size: 11px;
   color: var(--text-dim);
   line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.achievement-meta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
 }
 
 /* ── EDUCATION ── */
@@ -1472,7 +1482,8 @@ body {
   margin-bottom: 12px;
 }
 
-.portfolio-sub {
+.portfolio-sub,
+.section-sub {
   font-size: 15px;
   color: var(--text-muted);
   line-height: 1.6;

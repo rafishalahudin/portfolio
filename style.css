@@ -2780,6 +2780,14 @@ body {
 [data-theme="light"] .skill-group--green  .skill-group-icon { background: rgba(5,150,105,0.1);  color: #059669; }
 
 /* ── LIGHT MODE: ACHIEVEMENT MEDALS ── */
+[data-theme="light"] .achievement-card {
+  background: #ffffff;
+  border-color: rgba(0,0,0,0.08);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+}
+[data-theme="light"] .achievement-card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
 [data-theme="light"] .achievement-medal--gold   { background: rgba(180,140,60,0.12);  color: #8b6914;  border-color: rgba(180,140,60,0.3);  }
 [data-theme="light"] .achievement-medal--silver { background: rgba(120,120,120,0.1);  color: #6b6560;  border-color: rgba(120,120,120,0.25); }
 [data-theme="light"] .achievement-medal--bronze { background: rgba(160,90,40,0.12);   color: #9a5228;  border-color: rgba(160,90,40,0.3);   }

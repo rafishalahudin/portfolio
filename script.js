@@ -248,7 +248,7 @@ mobileMenu.querySelectorAll('[data-close]').forEach(link => {
       'hero-subtitle':    'Supply Chain, Data,<br>dan Sedikit Coding',
       'hero-sub':         'Supervisor Supply Chain yang juga bisa ngoding — dari distribusi dan alokasi stok, sampai bikin tools dan dashboard sendiri buat ratusan gerai ritel di Indonesia.',
       'hero-btn':         'Lihat Karya Saya →',
-      'hero-tagline':     'Dari data ke keputusan yang tepat.',
+      'hero-tagline':     'Efisiensi bukan kebetulan — ada data di baliknya.',
       'section-about':    '01 — Tentang',
       'about-title':      'Di Balik Semua Ini',
       'about-p1':         "Nama saya <strong>Muhammad Rafi Shalahudin</strong> — Supervisor Supply Chain sekaligus Front End Developer, berbasis di Jakarta. Saya berada di persimpangan antara operasional dan teknologi: mengelola jaringan distribusi sekaligus membangun tools, dashboard, dan web app dengan React, Vite, dan Python.",

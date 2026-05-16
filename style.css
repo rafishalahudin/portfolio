@@ -1501,6 +1501,10 @@ body {
   margin-bottom: 0;
 }
 
+.portfolio-header .portfolio-sub {
+  margin-top: 12px;
+}
+
 .behance-link {
   font-size: 13px;
   font-weight: 600;

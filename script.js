@@ -167,8 +167,8 @@ mobileMenu.querySelectorAll('[data-close]').forEach(link => {
       'exp-present':      'Present',
       'section-org':      '04 — Leadership',
       'org-title':        'Organizational Experience',
-      'org-points-1':     '<li>Kept 5 divisions and 128 members aligned — made sure everyone knew what they were doing and why it mattered.</li><li>Hit 80% staff satisfaction by building a culture where people actually wanted to show up.</li><li>Pulled off 10 online events with 80+ participants each, all during peak COVID restrictions.</li>',
-      'org-points-2':     '<li>Created 100+ poster designs and produced 3 videos — including full live-streaming setups built from scratch.</li><li>Selected as GenBI delegate for Y20 Indonesia — a side event of G20 Indonesia, representing youth voices on global economic issues.</li>',
+      'org-points-1':     '<li><i data-lucide="users" class="op-icon"></i>Kept 5 divisions and 128 members aligned — made sure everyone knew what they were doing and why it mattered.</li><li><i data-lucide="trending-up" class="op-icon"></i>Hit 80% staff satisfaction by building a culture where people actually wanted to show up.</li><li><i data-lucide="calendar" class="op-icon"></i>Pulled off 10 online events with 80+ participants each, all during peak COVID restrictions.</li>',
+      'org-points-2':     '<li><i data-lucide="palette" class="op-icon"></i>Created 100+ poster designs and produced 3 videos — including full live-streaming setups built from scratch.</li><li><i data-lucide="globe" class="op-icon"></i>Selected as GenBI delegate for Y20 Indonesia — a side event of G20 Indonesia, representing youth voices on global economic issues.</li>',
       'section-achieve':  '05 — Achievements',
       'achieve-title':    'Recognition & Awards',
       'section-edu':      '06 — Education',
@@ -240,8 +240,8 @@ mobileMenu.querySelectorAll('[data-close]').forEach(link => {
       'exp-present':      'Sekarang',
       'section-org':      '04 — Kepemimpinan',
       'org-title':        'Pengalaman Organisasi',
-      'org-points-1':     '<li>Mengoordinasikan 5 divisi dan 128 anggota agar tetap selaras — memastikan setiap orang memahami perannya dan tujuan bersama.</li><li>Mencapai tingkat kepuasan anggota 80% dengan membangun budaya kerja yang inklusif dan mendorong kontribusi aktif.</li><li>Menyelenggarakan 10 acara online dengan 80+ peserta di tengah keterbatasan pandemi.</li>',
-      'org-points-2':     '<li>Menghasilkan 100+ desain poster dan memproduksi 3 video — termasuk membangun sistem live-streaming dari nol hingga siap tayang.</li><li>Terpilih sebagai delegasi GenBI untuk Y20 Indonesia — side event G20 Indonesia, mewakili suara pemuda dalam isu ekonomi global.</li>',
+      'org-points-1':     '<li><i data-lucide="users" class="op-icon"></i>Mengoordinasikan 5 divisi dan 128 anggota agar tetap selaras — memastikan setiap orang memahami perannya dan tujuan bersama.</li><li><i data-lucide="trending-up" class="op-icon"></i>Mencapai tingkat kepuasan anggota 80% dengan membangun budaya kerja yang inklusif dan mendorong kontribusi aktif.</li><li><i data-lucide="calendar" class="op-icon"></i>Menyelenggarakan 10 acara online dengan 80+ peserta di tengah keterbatasan pandemi.</li>',
+      'org-points-2':     '<li><i data-lucide="palette" class="op-icon"></i>Menghasilkan 100+ desain poster dan memproduksi 3 video — termasuk membangun sistem live-streaming dari nol hingga siap tayang.</li><li><i data-lucide="globe" class="op-icon"></i>Terpilih sebagai delegasi GenBI untuk Y20 Indonesia — side event G20 Indonesia, mewakili suara pemuda dalam isu ekonomi global.</li>',
       'section-achieve':  '05 — Pencapaian',
       'achieve-title':    'Penghargaan & Prestasi',
       'section-edu':      '06 — Pendidikan',
@@ -379,6 +379,7 @@ mobileMenu.querySelectorAll('[data-close]').forEach(link => {
         }
       });
     });
+    if (typeof lucide !== 'undefined') lucide.createIcons();
     // Update all lang labels
     const menuLabel = document.getElementById('langLabel');
     if (menuLabel) menuLabel.textContent = lang === 'en' ? 'Indonesia (English)' : 'Indonesia (Bahasa)';

@@ -1915,6 +1915,33 @@ body {
   flex-wrap: wrap;
 }
 
+.contact-email-hero {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font-size: clamp(20px, 2.8vw, 40px);
+  font-weight: 800;
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 3px solid var(--accent);
+  padding-bottom: 6px;
+  margin-bottom: 44px;
+  transition: color 0.2s;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.contact-email-hero:hover {
+  color: var(--accent);
+}
+
+.contact-email-hero [data-lucide] {
+  width: clamp(20px, 2vw, 32px);
+  height: clamp(20px, 2vw, 32px);
+  flex-shrink: 0;
+  stroke-width: 2.5;
+}
+
 .contact-btn {
   display: inline-flex;
   align-items: center;

@@ -1469,7 +1469,15 @@ body {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.portfolio-sub {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.6;
   margin-bottom: 40px;
+  max-width: 560px;
 }
 
 .portfolio-header .section-title {

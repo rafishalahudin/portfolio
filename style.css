@@ -898,6 +898,8 @@ body {
   background: #ffffff;
   box-shadow: 0 4px 24px rgba(0,0,0,0.10);
   transition: box-shadow 0.25s, transform 0.25s;
+  display: flex;
+  flex-direction: column;
 }
 
 .org-card:hover {
@@ -978,14 +980,15 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  margin-top: 14px;
+  align-self: flex-end;
+  margin-top: auto;
+  padding: 6px 12px;
   font-size: 12px;
   font-weight: 600;
   color: #888;
   text-decoration: none;
   border: 1px solid #333;
   border-radius: 6px;
-  padding: 6px 12px;
   transition: color 0.2s, border-color 0.2s;
 }
 .org-cert-link:hover { color: #fff; border-color: #666; }

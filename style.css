@@ -991,10 +991,10 @@ body {
   border-radius: 6px;
   transition: color 0.2s, border-color 0.2s;
 }
-.org-cert-link:hover { color: #fff; border-color: #666; }
+.org-cert-link:hover { background: #222; color: #fff; border-color: #222; }
 .org-cert-link [data-lucide] { width: 13px; height: 13px; flex-shrink: 0; }
 [data-theme="light"] .org-cert-link { color: #555; border-color: #ccc; }
-[data-theme="light"] .org-cert-link:hover { color: #111; border-color: #999; }
+[data-theme="light"] .org-cert-link:hover { background: #111; color: #fff; border-color: #111; }
 
 /* ── ACHIEVEMENTS ── */
 .achievements { background: var(--bg-3); }

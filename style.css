@@ -995,9 +995,11 @@ body {
 .org-cert-link [data-lucide] { width: 13px; height: 13px; flex-shrink: 0; }
 [data-theme="light"] .org-cert-link { color: #555; border-color: #ccc; }
 [data-theme="light"] .org-cert-link:hover { background: #111; color: #fff; border-color: #111; }
-.achievement-card .org-cert-link { margin-top: 0; align-self: auto; }
-.org-cert-row { display: flex; gap: 8px; justify-content: flex-end; margin-top: 24px; flex-wrap: wrap; }
-.achievement-card > .org-cert-link { margin-top: 24px; align-self: flex-end; }
+.achievement-footer { margin-top: auto; padding-top: 16px; }
+.achievement-footer .achievement-meta { margin-top: 0; }
+.achievement-footer .org-cert-link { margin-top: 12px; align-self: flex-end; display: flex; }
+.org-cert-row { display: flex; gap: 8px; justify-content: flex-end; margin-top: 12px; }
+.org-cert-row .org-cert-link { margin-top: 0; padding: 5px 10px; font-size: 11px; }
 
 /* ── ACHIEVEMENTS ── */
 .achievements { background: var(--bg-3); }
@@ -1052,7 +1054,7 @@ body {
 }
 
 .achievement-logo--cover {
-  max-height: 52px;
+  max-height: 44px;
   border-radius: 6px;
   object-fit: cover;
 }
@@ -1100,7 +1102,6 @@ body {
   font-size: 11px;
   color: var(--text-dim);
   line-height: 1.5;
-  margin-top: auto;
 }
 
 /* ── EDUCATION ── */

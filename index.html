@@ -13,10 +13,13 @@
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Muhammad Rafi Shalahudin" />
   <meta property="og:url" content="https://rafisalahudin.github.io/portfolio/" />
   <meta property="og:title" content="Muhammad Rafi Shalahudin — Supply Chain & Data Analyst" />
   <meta property="og:description" content="Supply Chain Supervisor at Erajaya, Data Analyst, and UI/UX Designer based in Jakarta, Indonesia." />
   <meta property="og:image" content="https://rafisalahudin.github.io/portfolio/photo.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -24,27 +27,41 @@
   <meta name="twitter:description" content="Supply Chain Supervisor at Erajaya, Data Analyst, and UI/UX Designer based in Jakarta." />
   <meta name="twitter:image" content="https://rafisalahudin.github.io/portfolio/photo.png" />
 
-  <!-- Structured data: Person schema for Google knowledge recognition -->
+  <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Muhammad Rafi Shalahudin",
-    "alternateName": "Rafi Shalahudin",
-    "url": "https://rafisalahudin.github.io/portfolio/",
-    "jobTitle": "Supply Chain & Distribution Supervisor",
-    "worksFor": { "@type": "Organization", "name": "Erajaya Swasembada" },
-    "address": { "@type": "PostalAddress", "addressLocality": "Jakarta", "addressCountry": "ID" },
-    "sameAs": [
-      "https://linkedin.com/in/rafishalahudin",
-      "https://medium.com/@rafishalahudin",
-      "https://www.youtube.com/@rafishalahudin"
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://rafisalahudin.github.io/portfolio/#website",
+        "name": "Muhammad Rafi Shalahudin",
+        "url": "https://rafisalahudin.github.io/portfolio/",
+        "description": "Portfolio of Muhammad Rafi Shalahudin — Supply Chain & Data Analyst"
+      },
+      {
+        "@type": "Person",
+        "@id": "https://rafisalahudin.github.io/portfolio/#person",
+        "name": "Muhammad Rafi Shalahudin",
+        "alternateName": "Rafi Shalahudin",
+        "url": "https://rafisalahudin.github.io/portfolio/",
+        "image": "https://rafisalahudin.github.io/portfolio/photo.png",
+        "jobTitle": "Supply Chain & Distribution Supervisor",
+        "worksFor": { "@type": "Organization", "name": "Erajaya Swasembada" },
+        "address": { "@type": "PostalAddress", "addressLocality": "Jakarta", "addressCountry": "ID" },
+        "sameAs": [
+          "https://linkedin.com/in/rafishalahudin",
+          "https://medium.com/@rafishalahudin",
+          "https://www.youtube.com/@rafishalahudin"
+        ]
+      }
     ]
   }
   </script>
 
-  <link rel="icon" type="image/png" href="favicon-rafi.png" />
-  <link rel="apple-touch-icon" href="favicon-rafi.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-rafi.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-rafi.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon-rafi.png" />
   <script>
     (function(){
       var t = localStorage.getItem('theme') ||
@@ -506,7 +523,7 @@
             <div class="edu-divider"></div>
             <h3 class="edu-degree">Bachelor of Communication Science</h3>
             <p class="edu-school"><i data-lucide="graduation-cap"></i> Indonesia University of Education (UPI)</p>
-            <p class="edu-location"><i data-lucide="map-pin"></i> Bandung, Indonesia &nbsp;·&nbsp; <i data-lucide="calendar"></i> July 2018 – January 2023</p>
+            <p class="edu-location"><span class="edu-loc-item"><i data-lucide="map-pin"></i> Bandung, Indonesia</span><span class="edu-loc-sep">·</span><span class="edu-loc-item"><i data-lucide="calendar"></i> July 2018 – January 2023</span></p>
           </div>
         </div>
       </div>

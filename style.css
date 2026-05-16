@@ -995,7 +995,9 @@ body {
 .org-cert-link [data-lucide] { width: 13px; height: 13px; flex-shrink: 0; }
 [data-theme="light"] .org-cert-link { color: #555; border-color: #ccc; }
 [data-theme="light"] .org-cert-link:hover { background: #111; color: #fff; border-color: #111; }
-.achievement-card .org-cert-link { margin-top: 24px; align-self: flex-end; }
+.achievement-card .org-cert-link { margin-top: 0; align-self: auto; }
+.org-cert-row { display: flex; gap: 8px; justify-content: flex-end; margin-top: 24px; flex-wrap: wrap; }
+.achievement-card > .org-cert-link { margin-top: 24px; align-self: flex-end; }
 
 /* ── ACHIEVEMENTS ── */
 .achievements { background: var(--bg-3); }

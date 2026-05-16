@@ -758,6 +758,7 @@ body {
   color: var(--accent);
   letter-spacing: 0.04em;
   line-height: 1.4;
+  white-space: nowrap;
 }
 
 .timeline-loc {
@@ -2608,8 +2609,11 @@ body {
   filter: opacity(1);
 }
 
+[data-theme="light"] .company-logo--skilvul {
+  filter: none;
+}
 [data-theme="light"] .timeline-item:hover .company-logo--skilvul {
-  filter: brightness(1.1);
+  filter: none;
 }
 
 /* Notion icon from simpleicons is white — invert in light mode */
